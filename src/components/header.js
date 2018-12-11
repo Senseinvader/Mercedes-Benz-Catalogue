@@ -13,7 +13,7 @@ class Header extends Component {
             )
         };
 
-        const bodyOptionList = (elementList) => {
+        const optionList = (elementList) => {
             if (elementList) {
                 return (
                     <React.Fragment>
@@ -37,11 +37,11 @@ class Header extends Component {
 
                 </div>
                 <select className="body-select">
-                    {bodyOptionList(bodyList)}
+                    {optionList(bodyList)}
                 </select>
 
                 <select className="model-select">
-                    {bodyOptionList(modelList)}
+                    {optionList(modelList)}
                 </select>
             </div>
         )
