@@ -1,10 +1,14 @@
 import React, {Component} from 'react';
 
 
-class Header {
+class Header extends Component {
 
     render() {
-        return null;
+        return (
+            <div className="header-container">
+
+            </div>
+        )
 
 
 
