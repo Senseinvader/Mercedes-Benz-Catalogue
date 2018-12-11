@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Header from './header';
 import {configure, shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
@@ -20,5 +19,5 @@ describe('Header component', () => {
 
     it('has two select inputs', () => {
         expect(wrapper.find('select').length).toEqual(2);
-    })
+    });
 });
