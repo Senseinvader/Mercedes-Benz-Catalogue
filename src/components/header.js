@@ -5,9 +5,9 @@ class Header extends Component {
     render() {
         const {bodyList, modelList} = this.props;
 
-        const optionElement = (name, key) => {
+        const optionElement = (id, name, key) => {
             return (
-                <option value={name} key={key}>
+                <option value={id} key={key}>
                     {name}
                 </option>
             )
@@ -18,7 +18,9 @@ class Header extends Component {
                 return (
                     <React.Fragment>
                         {elementList.map((element, key) => {
-                            return optionElement(element, key);})
+                            console.log(element)
+                            const {bodyId, bodyName} = element;
+                            return optionElement(bodyId, bodyName, key);})
                         }
                     </React.Fragment>
                 )

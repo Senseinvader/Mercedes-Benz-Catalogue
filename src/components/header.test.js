@@ -23,10 +23,10 @@ describe('Header component', () => {
 
 
     it('has options of bodyList', () => {
-        const bodyList = ['body-1', 'body-2'];
+        const bodyList = [{bodyId: 'body-1', bodyName: 'body-1-name'}, {bodyId: 'body-2', bodyName: 'body-3-name'}];
         const headerWithBodyCar = shallow(<Header bodyList={bodyList} />);
         bodyList.forEach((body) => {
-            expect(headerWithBodyCar.containsMatchingElement(<option value={body}>{body}</option>)).toEqual(true)
+            expect(headerWithBodyCar.containsMatchingElement(<option value={body.bodyId}>{body.bodyName}</option>)).toEqual(true)
         });
     });
 
