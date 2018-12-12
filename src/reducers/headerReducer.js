@@ -3,7 +3,7 @@ const initialState = {
     modelList: []
 };
 
-const searchReducer = (state = initialState, action) => {
+const headerReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'FETCH_BODY_LIST':
             return {...state, bodyList: action.bodyList};
@@ -15,4 +15,4 @@ const searchReducer = (state = initialState, action) => {
     }
 };
 
-export default searchReducer;
+export default headerReducer;

@@ -1,9 +1,9 @@
-import searchReducer from "./searchReducer";
+import headerReducer from "./headerReducer";
 
 describe('tests of search reducer', () => {
 
     it('should return the initial state', () => {
-        expect(searchReducer(undefined, {})).toEqual({
+        expect(headerReducer(undefined, {})).toEqual({
                 bodyList: [],
                 modelList: []
             });
@@ -11,7 +11,7 @@ describe('tests of search reducer', () => {
 
     it('should handle FETCH_BODY_LIST', () => {
         expect(
-            searchReducer([], {
+            headerReducer([], {
                 type: 'FETCH_BODY_LIST',
                 bodyList: ['body-1', 'body-2']
             })
@@ -22,7 +22,7 @@ describe('tests of search reducer', () => {
 
     it('should handle FETCH_MODEL_LIST', () => {
         expect(
-            searchReducer([], {
+            headerReducer([], {
                 type: 'FETCH_MODEL_LIST',
                 modelList: ['model-1', 'model-2']
             })
