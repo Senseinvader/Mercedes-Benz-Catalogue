@@ -12,11 +12,14 @@ describe('Side Block', () => {
        expect(wrapper.find('.data-container').children().length).toEqual(6);
     });
     it('Side block component receives props', () => {
-        const wrapper = shallow(<SideBlock model='Mercedes'/>)
-       expect(wrapper.instance().props.model).toBe('Mercedes');
+        const wrapper = shallow(<SideBlock car='Mercedes'/>)
+       expect(wrapper.instance().props.car).toBe('Mercedes');
     });
-    it('a tag node renders div correctly', () => {
-        const wrapper = shallow(<SideBlock model={'BMW'}/>)
-       expect(wrapper.find('div.price').props().model).toBe('BMW');
+    it('a tag node renders div correctly, has the price div receives price and currency props', () => {
+        const model = { price:'1200', currency: 'EUR' };
+        console.log(model.price);
+        const wrapper = shallow(<SideBlock car={'BMW'} {...model} />)
+        expect(wrapper.find('div.price').props().car).toBe('BMW');
+        expect(wrapper.find('.price h3').text()).toEqual('1200 EUR');
     });
 });
