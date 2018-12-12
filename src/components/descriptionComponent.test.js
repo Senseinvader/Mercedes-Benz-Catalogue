@@ -14,11 +14,17 @@ describe('Description component', () => {
         expect(wrapper.find('div').length).toBe(1);
     });
     //renders description conditionally
-    it('renders inter/exter description based on props', () => {
+    it('renders exter description when exterior flag is true', () => {
         const displaySetting = {exterior: true};
         const description = {interiorDesc: 'interior', exteriorDesc: 'exterior'};
         const wrapper = shallow(<DescriptionComponent {...displaySetting} {...description} />)
         expect(wrapper.find('div h3').text()).toBe('exterior');
+    });
+    it('renders inter description when exterior flag is false', () => {
+        const displaySetting = {exterior: false};
+        const description = {interiorDesc: 'interior', exteriorDesc: 'exterior'};
+        const wrapper = shallow(<DescriptionComponent {...displaySetting} {...description} />)
+        expect(wrapper.find('div h3').text()).toBe('interior');
     });
     //test snapshot
     it('matches the snapshot', () => {
