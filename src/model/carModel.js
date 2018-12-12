@@ -1,6 +1,9 @@
 export default class CarModel {
 
-    constructor(modelId, configurationId, price, currency, interiorDesc, exteriorDesc, fuelConsumption, fuelConsumptionUnit, power, powerUnit, capacity, capacityUnit, topSpeed, topSpeedUnit, acceleration, accelerationUnit) {
+    constructor(modelId, configurationId, price, currency, interiorDesc,
+                exteriorDesc, fuelConsumption, fuelConsumptionUnit, power,
+                powerUnit, capacity, capacityUnit, topSpeed, topSpeedUnit,
+                acceleration, accelerationUnit, interPhotoUrl, outerPhotoUrl) {
         this.modelId = modelId;
         this.configurationId = configurationId;
         this.price = price;
@@ -16,7 +19,9 @@ export default class CarModel {
         this.topSpeed = topSpeed;
         this.topSpeedUnit = topSpeedUnit;
         this.acceleration = acceleration;
-        this.accelerationUnit = accelerationUnit
+        this.accelerationUnit = accelerationUnit;
+        this.interPhoto = interPhotoUrl;
+        this.outerPhoto = outerPhotoUrl;
     }
 }
 
@@ -26,8 +31,8 @@ export const getCarModel = (model) => {
         model.configurationId,
         model.configurationPrice.price,
         model.configurationPrice.currency,
-        model.vehicleComponents[0].description,
-        model.vehicleComponents[1].description,
+        model.vehicleComponents[0].description,         //exterior description
+        model.vehicleComponents[1].description,         //interior description
         model.technicalInformation.engine.fuelEconomy.fuelConsumptionCombinedMin.value,
         model.technicalInformation.engine.fuelEconomy.fuelConsumptionCombinedMin.unit,
         model.technicalInformation.engine.powerHp.value,
@@ -37,6 +42,8 @@ export const getCarModel = (model) => {
         model.technicalInformation.engine.topSpeed.value,
         model.technicalInformation.engine.topSpeed.unit,
         model.technicalInformation.engine.acceleration.value,
-        model.technicalInformation.engine.acceleration.unit
+        model.technicalInformation.engine.acceleration.unit,
+        model.interPhotoUrl,
+        model.outerPhotoUrl
     );
 };
