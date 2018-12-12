@@ -25,6 +25,5 @@ describe('Side Block', () => {
     });
     it('matches the snapshot', () => {
        expect(toJson(wrapper)).toMatchSnapshot();
-       console.log(wrapper.debug())
     });
 });
