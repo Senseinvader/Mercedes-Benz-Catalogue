@@ -2,6 +2,7 @@ import React from 'react';
 import {shallow, configure} from 'enzyme';
 import DescriptionComponent from './descriptionComponent';
 import Adapter from 'enzyme-adapter-react-16';
+import toJson from 'enzyme-to-json';
 
 configure({adapter: new Adapter()});
 
@@ -20,4 +21,7 @@ describe('Description component', () => {
         expect(wrapper.find('div h3').text()).toBe('exterior');
     });
     //test snapshot
+    it('matches the snapshot', () => {
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
