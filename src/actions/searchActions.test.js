@@ -24,7 +24,7 @@ describe('async actions', () => {
         const expectedActions = [{
             type: 'FETCH_BODY_LIST',
             bodyList: ['body-1', 'body-2']
-        }]
+        }];
 
         const store = mockStore({ bodyList: []});
 
