@@ -12,23 +12,21 @@ export const fetchBodiesRequest = () => ({
     type: 'FETCH_BODIES_REQUEST'
 });
 
-export const fetchBodiesSuccess = (data) => ({
+export const fetchBodiesSuccess = (bodyList) => ({
     type: 'FETCH_BODIES_SUCCESS',
-    data
+    bodyList
 });
 export const fetchBodiesFailure = (error) => ({
     type: 'FETCH_BODIES_FAILURE',
     error
 });
-export const fetchBodiesResults = () => (dispatch, getState) => {
 
-    dispatch(fetchBodiesRequest());
-
-    return fetch(getBodiesQuery)
-        .then((response) => response.json())
-        .then((data) => {
-            const bodiesList = getBodiesList(data);
-            dispatch(fetchBodiesSuccess(bodiesList));
-        })
-        .catch(error => dispatch(fetchBodiesFailure(error)));
+export const fetchBodyList = () => {
+    return dispatch => {
+        dispatch(fetchBodiesRequest());
+        return fetch(getBodiesQuery)
+            .then(res => res.json())
+            .then(body => dispatch(fetchBodiesSuccess(getBodiesList(body))))
+            .catch(error => dispatch(fetchBodiesFailure(error)));
+    }
 };

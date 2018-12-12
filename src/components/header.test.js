@@ -23,18 +23,18 @@ describe('Header component', () => {
 
 
     it('has options of bodyList', () => {
-        const bodyList = ['body-1', 'body-2'];
+        const bodyList = [{bodyId: 'body-1', bodyName: 'body-1-name'}, {bodyId: 'body-2', bodyName: 'body-3-name'}];
         const headerWithBodyCar = shallow(<Header bodyList={bodyList} />);
         bodyList.forEach((body) => {
-            expect(headerWithBodyCar.containsMatchingElement(<option value={body}>{body}</option>)).toEqual(true)
+            expect(headerWithBodyCar.containsMatchingElement(<option value={body.bodyId}>{body.bodyName}</option>)).toEqual(true)
         });
     });
 
     it('has options of modelList', () => {
-        const modelList = ['model-1', 'model-2'];
+        const modelList = [{modelId: 'body-1', modelName: 'body-1-name'}, {modelId: 'body-2', modelName: 'body-3-name'}];
         const headerWithModelCar = shallow(<Header modelList={modelList} />);
         modelList.forEach((model) => {
-            expect(headerWithModelCar.containsMatchingElement(<option value={model}>{model}</option>)).toEqual(true)
+            expect(headerWithModelCar.containsMatchingElement(<option value={model.modelId}>{model.modelName}</option>)).toEqual(true)
         });
     });
 });

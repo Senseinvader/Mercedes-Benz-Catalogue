@@ -5,20 +5,20 @@ class Header extends Component {
     render() {
         const {bodyList, modelList} = this.props;
 
-        const optionElement = (name, key) => {
+        const optionElement = (id, name, key) => {
             return (
-                <option value={name} key={key}>
+                <option value={id} key={key}>
                     {name}
                 </option>
             )
         };
 
-        const optionList = (elementList) => {
+        const optionList = (elementList, idLabel, nameLabel) => {
             if (elementList) {
                 return (
                     <React.Fragment>
                         {elementList.map((element, key) => {
-                            return optionElement(element, key);})
+                            return optionElement(element[idLabel], element[nameLabel], key);})
                         }
                     </React.Fragment>
                 )
@@ -37,11 +37,11 @@ class Header extends Component {
 
                 </div>
                 <select className="body-select">
-                    {optionList(bodyList)}
+                    {optionList(bodyList, 'bodyId', 'bodyName')}
                 </select>
 
                 <select className="model-select">
-                    {optionList(modelList)}
+                    {optionList(modelList, 'modelId', 'modelName')}
                 </select>
             </div>
         )
