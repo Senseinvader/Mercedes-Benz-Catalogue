@@ -20,4 +20,7 @@ describe('App component', () => {
     it('contains SideBlock component', () => {
         expect(wrapper.find('SideBlock').exists()).toBe(true);
     });
+    it('contains Description component', () => {
+       expect(wrapper.find('Description').exists()).toBe(true);
+    });
 });
