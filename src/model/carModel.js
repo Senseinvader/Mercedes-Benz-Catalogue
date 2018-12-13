@@ -1,7 +1,7 @@
 export default class CarModel {
 
-    constructor(modelId, configurationId, price, currency,
-                exteriorDesc, interiorDesc, fuelConsumption, fuelConsumptionUnit, power,
+    constructor(modelId, configurationId, price, currency, exteriorDesc, interiorDesc,
+                fuelConsumption, fuelConsumptionUnit, power,
                 powerUnit, capacity, capacityUnit, topSpeed, topSpeedUnit,
                 acceleration, accelerationUnit, interPhotoUrl, outerPhotoUrl) {
         this.modelId = modelId;
@@ -39,11 +39,9 @@ export const getCarModel = (model) => {
         model.technicalInformation.engine.powerHp.unit,
         model.technicalInformation.engine.capacity.value,
         model.technicalInformation.engine.capacity.unit,
-        model.technicalInformation.engine.topSpeed.value,
-        model.technicalInformation.engine.topSpeed.unit,
-        model.technicalInformation.engine.acceleration.value,
-        model.technicalInformation.engine.acceleration.unit,
-        model.interPhotoUrl,
-        model.outerPhotoUrl
+        model.technicalInformation.topSpeed.value,
+        model.technicalInformation.topSpeed.unit,
+        model.technicalInformation.acceleration.value,
+        model.technicalInformation.acceleration.unit
     );
 };
