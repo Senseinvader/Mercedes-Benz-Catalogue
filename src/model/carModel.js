@@ -1,15 +1,15 @@
 export default class CarModel {
 
-    constructor(modelId, configurationId, price, currency, interiorDesc,
-                exteriorDesc, fuelConsumption, fuelConsumptionUnit, power,
+    constructor(modelId, configurationId, price, currency,
+                exteriorDesc, interiorDesc, fuelConsumption, fuelConsumptionUnit, power,
                 powerUnit, capacity, capacityUnit, topSpeed, topSpeedUnit,
                 acceleration, accelerationUnit, interPhotoUrl, outerPhotoUrl) {
         this.modelId = modelId;
         this.configurationId = configurationId;
         this.price = price;
         this.currency = currency;
-        this.interiorDesc = interiorDesc;
         this.exteriorDesc = exteriorDesc;
+        this.interiorDesc = interiorDesc;
         this.fuelConsumption = fuelConsumption;
         this.fuelConsumptionUnit = fuelConsumptionUnit;
         this.power = power;
