@@ -4,3 +4,7 @@ export const getBodiesQuery = `https://api.mercedes-benz.com/configurator/v1/mar
 export const getModelsQuery = (bodyId) => {
     return ` https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models?bodyId=${bodyId}&apikey=${API_KEY}`;
 };
+
+export const getModelConfigurationQuery = (modelId) => {
+    return `https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/${modelId}/configurations/initial?apikey=${API_KEY}`
+};
