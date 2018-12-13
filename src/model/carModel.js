@@ -8,8 +8,8 @@ export default class CarModel {
         this.configurationId = configurationId;
         this.price = price;
         this.currency = currency;
-        this.interiorDesc = interiorDesc;
         this.exteriorDesc = exteriorDesc;
+        this.interiorDesc = interiorDesc;
         this.fuelConsumption = fuelConsumption;
         this.fuelConsumptionUnit = fuelConsumptionUnit;
         this.power = power;
