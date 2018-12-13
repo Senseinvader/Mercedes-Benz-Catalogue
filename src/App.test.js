@@ -15,5 +15,12 @@ describe('App component', () => {
 
     it('contains Header component', () => {
         expect(wrapper.find('Header').exists()).toBe(true);
-    })
+    });
+
+    it('contains SideBlock component', () => {
+        expect(wrapper.find('SideBlock').exists()).toBe(true);
+    });
+    it('contains Description component', () => {
+       expect(wrapper.find('Description').exists()).toBe(true);
+    });
 });

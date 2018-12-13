@@ -8,6 +8,7 @@
 # testing
 /coverage
 /src/non-export-data
+__snapshots__/
 
 # production
 /build
