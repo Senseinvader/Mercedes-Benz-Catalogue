@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-// import changeImage from '../actions/'
+import changeImage from '../actions/sliderActions';
+import {connect} from "react-redux";
 
-class Slider extends Component {
+export class Slider extends Component {
     render() {
-        console.log(this.props);
         const {arr, exterior, handleChangeImage} = this.props;
         if (arr === undefined) {
             return (
@@ -20,7 +20,7 @@ class Slider extends Component {
         return(
             <div className="slider-container">
                 <div className="slider fade">
-                    <img src={exterior ? arr[0] : arr[1]} alt="1" />
+                    <img src={exterior ? arr[0] : arr[1]} alt="1" onClick={() => handleChangeImage} />
                     <div className="comment">Test</div>
                 </div>
             </div>
@@ -28,10 +28,18 @@ class Slider extends Component {
     };
 }
 
-export default Slider;
+const mapStateToProps = (state) => {
+    return {
+        arr: state.searchReducer.searchCriteria,
+        items: state.searchReducer.items
+    }
+};
 
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         handleChangeImage: () => dispatch(changeImage)
-//     }
-}
+const mapDispatchToProps = (dispatch) => {
+    console.log('action called');
+    return {
+        handleChangeImage: () => dispatch(changeImage)
+    }
+};
+
+export default connect(mapDispatchToProps)(Slider);
