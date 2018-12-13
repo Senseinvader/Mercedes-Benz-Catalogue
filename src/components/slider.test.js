@@ -27,7 +27,13 @@ describe('Slider component', () => {
         expect(wrapper.find('img').props().src).toBe('exterior.jpg');
     });
 
-    //test switch in between images forward and back
+    //test switch in between images forward
+    it('click on the picture switches picture', () => {
+        const wrapper = shallow(<Slider {...imageArray} display={displaySetting}/>);
+        expect(wrapper.find('img').props().src).toBe('interior.jpg');
+        wrapper.find('img').simulate('click');
+        expect(wrapper.find('img').props().src).toBe('exterior.jpg');
+    });
 
     //test match the snapshot
 });
