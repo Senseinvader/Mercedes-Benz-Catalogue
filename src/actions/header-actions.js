@@ -1,6 +1,7 @@
 import {API_KEY} from '../non-export-data/api-key';
 import {getBodiesList} from '../model/body';
-import {getBodiesQuery} from './apiQueries';
+import {getBodiesQuery, getModelsQuery} from './apiQueries';
+import {getModelSnippettsList} from "../model/carModelSnippet";
 
 export const testAction = () => ({
     type: 'TEST_ACTION',
@@ -21,12 +22,35 @@ export const fetchBodiesFailure = (error) => ({
     error
 });
 
+export const fetchModelsRequest = () => ({
+    type: 'FETCH_MODELS_REQUEST'
+});
+
+export const fetchModelsSuccess = (modelList) => ({
+    type: 'FETCH_MODELS_SUCCESS',
+    modelList
+});
+export const fetchModelsFailure = (error) => ({
+    type: 'FETCH_MODELS_FAILURE',
+    error
+});
+
 export const fetchBodyList = () => {
     return dispatch => {
         dispatch(fetchBodiesRequest());
         return fetch(getBodiesQuery)
             .then(res => res.json())
             .then(body => dispatch(fetchBodiesSuccess(getBodiesList(body))))
-            .catch(error => dispatch(fetchBodiesFailure(error)));
+            .catch(error => dispatch(fetchModelsFailure(error)));
+    }
+};
+
+export const fetchModelList = (bodyId) => {
+    return dispatch => {
+        dispatch(fetchModelsRequest());
+        return fetch(getModelsQuery(bodyId))
+            .then(res => res.json())
+            .then(body => dispatch(fetchModelsSuccess(getModelSnippettsList(body))))
+            .catch(error => dispatch(fetchModelsFailure(error)));
     }
 };
