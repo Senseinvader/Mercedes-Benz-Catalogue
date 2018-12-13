@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 
 class Slider extends Component {
     render() {
-        const {arr} = this.props;
+        console.log(this.props);
+        const {arr, exterior} = this.props;
         if (arr === undefined) {
             return (
                 <div className="slider-container">
@@ -20,7 +21,7 @@ class Slider extends Component {
         return(
             <div className="slider-container">
                 <div className="slider fade">
-                    <img src={arr[0]} alt="1"/>
+                    <img src={exterior ? arr[0] : arr[1]} alt="1"/>
                     <div className="comment">Test</div>
                 </div>
                 <a className="prev">&#10094;</a>
