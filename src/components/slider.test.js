@@ -1,5 +1,5 @@
 import React from 'react';
-import {Slider} from './slider';
+import ConnectedSlider, {Slider} from './slider';
 import {shallow, configure} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
@@ -13,27 +13,30 @@ describe('Slider component', () => {
         expect(wrapper.find('img').exists()).toBe(true);
     });
 
-    const imageArray = {arr: ['exterior.jpg', 'interior.jpg']};
-    const displaySetting = {exterior: false};
+    const props = {
+        arr: ['exterior.jpg', 'interior.jpg'],
+        exterior: false,
+        handleChangeImage: jest.fn(()=> console.log('mocked changeImage'))
+    };
     it('src tag node renders src correctly', () => {
-        const wrapper = shallow(<Slider {...imageArray} />);
+        const wrapper = shallow(<Slider {...props} />);
         expect(wrapper.find('img').props().src).toBe('interior.jpg');
     });
     //comment switches depending on props exterior=false
     it('switches pictures depending on exterior prop', () => {
-        const wrapper = shallow(<Slider {...imageArray} display={displaySetting}/>);
+        const wrapper = shallow(<Slider {...props}/>);
         expect(wrapper.find('img').props().src).toBe('interior.jpg');
         wrapper.setProps({exterior: true});
         expect(wrapper.find('img').props().src).toBe('exterior.jpg');
     });
 
     //test switch in between images forward
-    // it('click on the picture switches picture', () => {
-    //     const wrapper = shallow(<Slider {...imageArray} display={displaySetting}/>);
-    //     expect(wrapper.find('img').props().src).toBe('interior.jpg');
-    //     wrapper.find('img').simulate('click');
-    //     expect(wrapper.find('img').props().src).toBe('exterior.jpg');
-    // });
+    it('click on the picture calls the handleChangeImage', () => {
+        const wrapper = shallow(<Slider {...props}/>);
+        expect(wrapper.find('img').props().src).toBe('interior.jpg');
+        wrapper.find('img').simulate('click');
+        expect(props.handleChangeImage.mock.calls.length).toEqual(1);
+    });
 
     //test match the snapshot
 });
