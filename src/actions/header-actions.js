@@ -41,7 +41,7 @@ export const fetchBodyList = () => {
         return fetch(getBodiesQuery)
             .then(res => res.json())
             .then(body => dispatch(fetchBodiesSuccess(getBodiesList(body))))
-            .catch(error => dispatch(fetchModelsFailure(error)));
+            .catch(error => dispatch(fetchBodiesFailure(error)));
     }
 };
 
