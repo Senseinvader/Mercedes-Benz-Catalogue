@@ -39,4 +39,8 @@ describe('Slider component', () => {
     });
 
     //test match the snapshot
+    it('matches the snapshot', () => {
+        const wrapper = shallow(<Slider />);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    })
 });
