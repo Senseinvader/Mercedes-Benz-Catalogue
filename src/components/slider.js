@@ -20,7 +20,7 @@ export class Slider extends Component {
         return(
             <div className="slider-container">
                 <div className="slider fade">
-                    <img src={exterior ? arr[0] : arr[1]} alt="1" onClick={() => handleChangeImage} />
+                    <img src={exterior ? arr[0] : arr[1]} alt="Mercedes" onClick={handleChangeImage} />
                     <div className="comment">Test</div>
                 </div>
             </div>
@@ -30,16 +30,15 @@ export class Slider extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        arr: state.searchReducer.searchCriteria,
-        items: state.searchReducer.items
+        arr: state.sliderReducer.imagesArray,
+        exterior: state.sliderReducer.exterior
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
-    console.log('action called');
     return {
         handleChangeImage: () => dispatch(changeImage)
     }
 };
 
-export default connect(mapDispatchToProps)(Slider);
+export default connect(mapStateToProps, mapDispatchToProps)(Slider);
