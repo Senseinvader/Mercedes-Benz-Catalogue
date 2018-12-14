@@ -7,11 +7,10 @@ import {
     bodyListExample,
     carModel,
     carModelImages,
-    expectedDataOfModelConfiguration,
-    modelConfigurationHeader
+    expectedDataOfModelConfiguration, interExamplePhoto, linkInterPhoto, linkOuterPhoto,
+    modelConfigurationHeader, modelListExample, outherExamplePhoto
 } from "./body-jsons";
 import CarModel from "../model/carModel";
-import {API_KEY} from "../non-export-data/api-key";
 
 const middleware = [thunk];
 const mockStore = configureStore(middleware);
@@ -45,26 +44,9 @@ describe('Header actions', () => {
     });
 
     it('creates FETCH_MODEL_LIST when fetching bodies cars has been done', () => {
-        const modelList = [
-            {
-                "modelId": "13",
-                "name": "Sports Tourer",
-                "_links": {
-                    "self": `https://api.mercedes-benz.com/configurator/v1/markets/de_DE/bodies/13?apikey=${API_KEY}`,
-                    "models": `https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models?bodyId=13&apikey=${API_KEY}`
-                }
-            },
-            {
-                "modelId": "15",
-                "name": "Shooting Brake",
-                "_links": {
-                    "self": `https://api.mercedes-benz.com/configurator/v1/markets/de_DE/bodies/15?apikey=${API_KEY}`,
-                    "models": `https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models?bodyId=15&apikey=${API_KEY}`
-                }
-            }];
 
         fetchMock.getOnce(getModelsQuery('1'), {
-            body: modelList,
+            body: modelListExample,
             headers: { 'content-type': 'application/json' }
 
         });
@@ -99,8 +81,8 @@ describe('Header actions', () => {
         });
 
         const expectedCarModel = carModel;
-        expectedCarModel.interPhoto = "https://europe.starconnect-ce.i.daimler.com/iris/iris?COSY-EU-100-1713d0VXqXWFqtyO35PobzIExXrItvsTQKkojUfGoo7GE11KFm9mWa9Q6FjcBXBryXGEAJ3J0l5CNOB29MjbApjTlI5uxmZQC31SrkzNwlbm7jAeohKV5sN%25vqCr9yLRzQfYax7rErH1eJin8wsofoiZUMdM4FnClTg95Qp6PDakmSeWH0Stsd9sGcUfDL1XGEW9YJ0ldCfOB2zB5bAp7ToI5uKMTQmIJwF1GY6PDGmhSc63ZstXS0h3cUf8XNXGEHiTJ0lU0xOB2GS1bApFnyI5u9mIQC3zC1kzN9tKm7sDgubYwR9hDv34taSj6hVNpLLxdYfqJVf%25XEd9B96N683eUHpi3v1Lbz71&&IMGT=P27&POV=BI1,PZM";
-        expectedCarModel.outerPhoto = "https://europe.starconnect-ce.i.daimler.com/iris/iris?COSY-EU-100-1713d0VXqXWFqtyO35PobzIExXrItvsTQKkojUfGoo7GE11KFm9mWa9Q6FjcBXBryXGEAJ3J0l5CNOB29MjbApjTlI5uxmZQC31SrkzNwlbm7jAeohKV5sN%25vqCr9yLRzQfYax7rErH1eJin8wsofoiZUMdM4FnClTg95Qp6PDakmSeWH0Stsd9sGcUfDL1XGEW9YJ0ldCfOB2zB5bAp7ToI5uKMTQmIJwF1GY6PDGmhSc63ZstXS0h3cUf8XNXGEHiTJ0lU0xOB2GS1bApFnyI5u9mIQC3zC1kzN9tKm7sDgubYwR9hDv34taSj6hVNpLLxdYfqJVf%25XEd9B96N683eUHpi3v1Lbz71&&IMGT=P27&POV=BE020,PZM";
+        expectedCarModel.interPhoto = interExamplePhoto;
+        expectedCarModel.outerPhoto = outherExamplePhoto;
         const expectedData = [
             {
                 type: 'FETCH_MODEL_CONFIGURATION_SUCCESS',
@@ -150,8 +132,8 @@ describe('Header actions', () => {
         });
 
         const expectedCarModel = carModel;
-        expectedCarModel.interPhoto = "https://europe.starconnect-ce.i.daimler.com/iris/iris?COSY-EU-100-1713d0VXqXWFqtyO35PobzIExXrItvsTQKkojUfGoo7GE11KFm9mWa9Q6FjcBXBryXGEAJ3J0l5CNOB29MjbApjTlI5uxmZQC31SrkzNwlbm7jAeohKV5sN%25vqCr9yLRzQfYax7rErH1eJin8wsofoiZUMdM4FnClTg95Qp6PDakmSeWH0Stsd9sGcUfDL1XGEW9YJ0ldCfOB2zB5bAp7ToI5uKMTQmIJwF1GY6PDGmhSc63ZstXS0h3cUf8XNXGEHiTJ0lU0xOB2GS1bApFnyI5u9mIQC3zC1kzN9tKm7sDgubYwR9hDv34taSj6hVNpLLxdYfqJVf%25XEd9B96N683eUHpi3v1Lbz71&&IMGT=P27&POV=BI1,PZM";
-        expectedCarModel.outerPhoto = "https://europe.starconnect-ce.i.daimler.com/iris/iris?COSY-EU-100-1713d0VXqXWFqtyO35PobzIExXrItvsTQKkojUfGoo7GE11KFm9mWa9Q6FjcBXBryXGEAJ3J0l5CNOB29MjbApjTlI5uxmZQC31SrkzNwlbm7jAeohKV5sN%25vqCr9yLRzQfYax7rErH1eJin8wsofoiZUMdM4FnClTg95Qp6PDakmSeWH0Stsd9sGcUfDL1XGEW9YJ0ldCfOB2zB5bAp7ToI5uKMTQmIJwF1GY6PDGmhSc63ZstXS0h3cUf8XNXGEHiTJ0lU0xOB2GS1bApFnyI5u9mIQC3zC1kzN9tKm7sDgubYwR9hDv34taSj6hVNpLLxdYfqJVf%25XEd9B96N683eUHpi3v1Lbz71&&IMGT=P27&POV=BE020,PZM";
+        expectedCarModel.interPhoto = linkInterPhoto;
+        expectedCarModel.outerPhoto = linkOuterPhoto;
         const expectedData = [
             {
                 type: 'FETCH_MODEL_CONFIGURATION_SUCCESS',
@@ -176,8 +158,8 @@ describe('Header actions', () => {
             headers: { 'content-type': 'aplication/json' }
         });
         const expectedCarModel = new CarModel();
-        expectedCarModel.interPhoto = "https://europe.starconnect-ce.i.daimler.com/iris/iris?COSY-EU-100-1713d0VXqXWFqtyO35PobzIExXrItvsTQKkojUfGoo7GE11KFm9mWa9Q6FjcBXBryXGEAJ3J0l5CNOB29MjbApjTlI5uxmZQC31SrkzNwlbm7jAeohKV5sN%25vqCr9yLRzQfYax7rErH1eJin8wsofoiZUMdM4FnClTg95Qp6PDakmSeWH0Stsd9sGcUfDL1XGEW9YJ0ldCfOB2zB5bAp7ToI5uKMTQmIJwF1GY6PDGmhSc63ZstXS0h3cUf8XNXGEHiTJ0lU0xOB2GS1bApFnyI5u9mIQC3zC1kzN9tKm7sDgubYwR9hDv34taSj6hVNpLLxdYfqJVf%25XEd9B96N683eUHpi3v1Lbz71&&IMGT=P27&POV=BI1,PZM";
-        expectedCarModel.outerPhoto = "https://europe.starconnect-ce.i.daimler.com/iris/iris?COSY-EU-100-1713d0VXqXWFqtyO35PobzIExXrItvsTQKkojUfGoo7GE11KFm9mWa9Q6FjcBXBryXGEAJ3J0l5CNOB29MjbApjTlI5uxmZQC31SrkzNwlbm7jAeohKV5sN%25vqCr9yLRzQfYax7rErH1eJin8wsofoiZUMdM4FnClTg95Qp6PDakmSeWH0Stsd9sGcUfDL1XGEW9YJ0ldCfOB2zB5bAp7ToI5uKMTQmIJwF1GY6PDGmhSc63ZstXS0h3cUf8XNXGEHiTJ0lU0xOB2GS1bApFnyI5u9mIQC3zC1kzN9tKm7sDgubYwR9hDv34taSj6hVNpLLxdYfqJVf%25XEd9B96N683eUHpi3v1Lbz71&&IMGT=P27&POV=BE020,PZM";
+        expectedCarModel.interPhoto = linkInterPhoto;
+        expectedCarModel.outerPhoto = linkOuterPhoto;
         const expectedData = [
             {
                 type: 'FETCH_MODEL_CONFIGURATION_SUCCESS',
@@ -186,6 +168,46 @@ describe('Header actions', () => {
         ]
         const store = mockStore({modelConfiguration: {}});
         return store.dispatch(headerActions.fetchModelConfigurationImages(new CarModel(), url))
+            .then(() => {
+                expect(store.getActions()).toEqual(expectedData);
+            });
+    });
+
+    it('has error when fetchBodyList has not query', () => {
+        fetchMock.getOnce(getBodiesQuery, {
+
+        });
+
+        const expectedData = [
+            {'type': 'FETCH_BODIES_REQUEST'},
+            {'type': 'FETCH_BODIES_FAILURE',
+                'error': 'Error: Mistake in query'
+            }
+        ]
+
+        const store = mockStore({ error: ''});
+
+        return store.dispatch(headerActions.fetchBodyList('', 'error'))
+            .then(() => {
+                expect(store.getActions()).toEqual(expectedData);
+            });
+    });
+
+    it('has error when fetchModelList has not query', () => {
+        fetchMock.getOnce(getModelsQuery(''), {
+
+        });
+
+        const expectedData = [
+            {'type': 'FETCH_MODELS_REQUEST'},
+            {'type': 'FETCH_MODELS_FAILURE',
+                'error': 'Error: Mistake in query'
+            }
+        ]
+
+        const store = mockStore({ error: ''});
+
+        return store.dispatch(headerActions.fetchModelList('', 'error'))
             .then(() => {
                 expect(store.getActions()).toEqual(expectedData);
             });

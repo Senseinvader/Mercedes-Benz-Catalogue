@@ -6,12 +6,6 @@ import {getCarModel} from "../model/carModel";
 import CarModel from "../model/carModel";
 import {modelConfigurationHeader} from "./body-jsons";
 
-export const testAction = () => ({
-    type: 'TEST_ACTION',
-    bodyId: 1,
-    bodyName: 'limousine'
-});
-
 export const fetchBodiesRequest = () => ({
     type: 'FETCH_BODIES_REQUEST'
 });
@@ -59,7 +53,7 @@ export const fetchBodyList = () => {
         return fetch(getBodiesQuery)
             .then(res => res.json())
             .then(body => dispatch(fetchBodiesSuccess(getBodiesList(body))))
-            .catch(error => dispatch(fetchBodiesFailure(error)));
+            .catch(error => dispatch(fetchBodiesFailure('Error: Mistake in query')));
     }
 };
 
@@ -69,7 +63,7 @@ export const fetchModelList = (bodyId) => {
         return fetch(getModelsQuery(bodyId))
             .then(res => res.json())
             .then(body => dispatch(fetchModelsSuccess(getModelSnippettsList(body))))
-            .catch(error => dispatch(fetchModelsFailure(error)));
+            .catch(error => dispatch(fetchModelsFailure('Error: Mistake in query')));
     }
 };
 
