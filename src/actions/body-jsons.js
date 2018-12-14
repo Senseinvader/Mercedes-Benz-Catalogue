@@ -27,6 +27,24 @@ export const expectedDataOfModelConfiguration = [
         "modelConfiguration": carModel
     }];
 
+export const bodyListExample = [
+    {
+        "bodyId": "13",
+        "bodyName": "Sports Tourer",
+        "_links": {
+            "self": `https://api.mercedes-benz.com/configurator/v1/markets/de_DE/bodies/13?apikey=${API_KEY}`,
+            "models": `https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models?bodyId=13&apikey=${API_KEY}`
+        }
+    },
+    {
+        "bodyId": "15",
+        "bodyName": "Shooting Brake",
+        "_links": {
+            "self": `https://api.mercedes-benz.com/configurator/v1/markets/de_DE/bodies/15?apikey=${API_KEY}`,
+            "models": `https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models?bodyId=15&apikey=${API_KEY}`
+        }
+    }];
+
 
 export const modelConfigurationHeader = {
     "marketId": "de_DE",
