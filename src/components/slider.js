@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import changeImage from '../actions/sliderActions';
+import {changeImage} from '../actions/sliderActions';
 import {connect} from "react-redux";
 
 export class Slider extends Component {
@@ -28,16 +28,16 @@ export class Slider extends Component {
     };
 }
 
-const mapStateToProps = (state) => {
+export const mapStateToProps = (state) => {
     return {
-        arr: state.sliderReducer.imagesArray,
-        exterior: state.sliderReducer.exterior
+        arr: state.imagesArray,
+        exterior: state.exterior
     }
 };
 
-const mapDispatchToProps = (dispatch) => {
+export const mapDispatchToProps = (dispatch) => {
     return {
-        handleChangeImage: () => dispatch(changeImage)
+        handleChangeImage: () => dispatch(changeImage())
     }
 };
 
