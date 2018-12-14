@@ -3,6 +3,7 @@ import {Slider, mapDispatchToProps, mapStateToProps} from './slider';
 import {shallow, configure} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
+import {changeImage} from "../actions/sliderActions";
 
 configure({adapter: new Adapter()});
 
@@ -17,10 +18,11 @@ describe('Slider component', () => {
         expect(mapStateToProps(initialState).exterior).toBe(true);
     });
     //test mapDispatchToProps
-    it('should chasnge image when clicked', () => {
+    it('should change image when clicked', () => {
         const dispatch = jest.fn();
         mapDispatchToProps(dispatch).handleChangeImage();
         expect(dispatch.mock.calls[0][0]).toEqual({type: 'IMAGE_CHANGED'});
+        expect(dispatch).toHaveBeenCalledWith(changeImage());
     });
     //test that component has one img node
     it('tests component has one img node', () => {
