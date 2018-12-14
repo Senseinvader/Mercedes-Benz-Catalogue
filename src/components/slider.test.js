@@ -1,5 +1,5 @@
 import React from 'react';
-import ConnectedSlider, {Slider} from './slider';
+import {Slider, mapDispatchToProps, mapStateToProps} from './slider';
 import {shallow, configure} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
@@ -7,6 +7,21 @@ import toJson from 'enzyme-to-json';
 configure({adapter: new Adapter()});
 
 describe('Slider component', () => {
+
+    //test mapStateToProps
+    it('should show sexterior of the initial value', () => {
+        const initialState = {
+            exterior: true,
+            imagesArray: []
+        };
+        expect(mapStateToProps(initialState).exterior).toBe(true);
+    });
+    //test mapDispatchToProps
+    it('should chasnge image when clicked', () => {
+        const dispatch = jest.fn();
+        mapDispatchToProps(dispatch).handleChangeImage();
+        expect(dispatch.mock.calls[0][0]).toEqual({type: 'IMAGE_CHANGED'});
+    });
     //test that component has one img node
     it('tests component has one img node', () => {
         const wrapper = shallow(<Slider />);
