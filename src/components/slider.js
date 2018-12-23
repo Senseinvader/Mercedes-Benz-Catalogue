@@ -28,18 +28,17 @@ export class Slider extends Component {
     };
 }
 
-// const mapStateToProps = (state) => {
-//     return {
-//         arr: state.searchReducer.searchCriteria,
-//         items: state.searchReducer.items
-//     }
-// };
+const mapStateToProps = (state) => {
+    return {
+        arr: state.sliderReducer.imagesArray,
+        exterior: state.sliderReducer.exterior
+    }
+};
 
 const mapDispatchToProps = (dispatch) => {
-    console.log('action called');
     return {
         handleChangeImage: () => dispatch(changeImage)
     }
 };
 
-export default connect(mapDispatchToProps)(Slider);
+export default connect(mapStateToProps, mapDispatchToProps)(Slider);

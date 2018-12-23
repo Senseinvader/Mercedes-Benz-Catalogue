@@ -1,5 +1,6 @@
 const initialState = {
     exterior: true,
+    imagesArray: []
 };
 
 const sliderReducer = (state = initialState, action) => {
