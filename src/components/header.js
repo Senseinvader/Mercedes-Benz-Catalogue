@@ -50,7 +50,8 @@ class Header extends Component {
 
 export const mapStateToProps = (state) => {
     return {
-        bodyList: state.headerReducer.bodyList
+        bodyList: state.headerReducer.bodyList,
+        modelList: state.headerReducer.modelList
     }
 };
 

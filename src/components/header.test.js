@@ -47,4 +47,14 @@ describe('Header component', () => {
 
         expect(mapStateToProps(initialState).bodyList).toEqual(['Empty']);
     });
+
+    it('Should show empty modelList', () => {
+        const initialState = {
+            headerReducer: {
+                modelList: ['Empty']
+            }
+        }
+
+        expect(mapStateToProps(initialState).modelList).toEqual(['Empty']);
+    })
 });
