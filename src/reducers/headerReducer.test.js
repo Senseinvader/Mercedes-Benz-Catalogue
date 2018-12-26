@@ -5,7 +5,9 @@ describe('tests of search reducer', () => {
     it('should return the initial state', () => {
         expect(headerReducer(undefined, {})).toEqual({
                 bodyList: [],
-                modelList: []
+                modelList: [],
+                loading: false,
+                error: null
             });
     });
 
@@ -15,7 +17,7 @@ describe('tests of search reducer', () => {
                 type: 'FETCH_BODIES_REQUEST'
             })
         ).toEqual({
-
+            loading: true
         });
     });
 
@@ -30,7 +32,8 @@ describe('tests of search reducer', () => {
             })
 
         ).toEqual({
-                bodyList: bodyList
+                bodyList: bodyList,
+                loading:false
         });
     });
 
@@ -43,7 +46,8 @@ describe('tests of search reducer', () => {
                error
            })
        ).toEqual({
-               error
+               error,
+           loading: false
            })
     });
 
@@ -53,7 +57,7 @@ describe('tests of search reducer', () => {
                type: 'FETCH_MODEL_REQUEST'
         })
        ).toEqual({
-
+            loading: true
         })
     });
 
@@ -66,7 +70,8 @@ describe('tests of search reducer', () => {
                 modelList: modelList
             })
         ).toEqual({
-            modelList
+            modelList,
+            loading: false
         })
     });
 
@@ -79,7 +84,8 @@ describe('tests of search reducer', () => {
                 error: error
             })
         ).toEqual({
-            error
+            error,
+            loading: false
             }
         )
     })

@@ -1,13 +1,19 @@
 import React from 'react';
-import Header from './header';
+import {Header} from './header';
 import {configure, shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
+import toJson from "enzyme-to-json";
 
 configure({ adapter: new Adapter() });
 
 
 describe('Header component', () => {
     const wrapper = shallow(<Header/>);
+
+    it('renders', () => {
+        const component = wrapper.dive();
+        expect(toJson(component)).toMatchSnapshot();
+    });
 
     it('has one div', () => {
         expect(wrapper.find('.header-container').exists()).toBe(true);
