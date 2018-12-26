@@ -1,6 +1,6 @@
 const initialState = {
-    bodyList: [],
-    modelList: []
+    bodyList: ['Empty'],
+    modelList: ['Empty']
 };
 
 const headerReducer = (state = initialState, action) => {
