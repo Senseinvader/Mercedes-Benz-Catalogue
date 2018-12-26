@@ -48,6 +48,12 @@ class Header extends Component {
     }
 }
 
+export const mapStateToProps = (state) => {
+    return {
+        bodyList: state.headerReducer.bodyList
+    }
+};
+
 
 
 export default Header;

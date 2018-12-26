@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './header';
+import Header, {mapStateToProps} from './header';
 import {configure, shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
@@ -36,5 +36,15 @@ describe('Header component', () => {
         modelList.forEach((model) => {
             expect(headerWithModelCar.containsMatchingElement(<option value={model.modelId}>{model.modelName}</option>)).toEqual(true)
         });
+    });
+
+    it('Should show empty bodyList', () => {
+        const initialState = {
+            headerReducer: {
+                bodyList: ['Empty']
+            }
+        };
+
+        expect(mapStateToProps(initialState).bodyList).toEqual(['Empty']);
     });
 });
