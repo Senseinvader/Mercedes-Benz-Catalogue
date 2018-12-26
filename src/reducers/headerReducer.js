@@ -1,27 +1,29 @@
 const initialState = {
     bodyList: [],
-    modelList: []
+    modelList: [],
+    loading: false,
+    error: null
 };
 
 const headerReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'FETCH_BODIES_REQUEST':
-            return {...state};
+            return {...state, loading: true};
 
         case 'FETCH_BODIES_SUCCESS':
-            return {...state, bodyList: action.bodyList};
+            return {...state, loading: false, bodyList: action.bodyList};
 
         case 'FETCH_BODIES_FAILURE':
-            return {...state, error: action.error};
-
-        case 'FETCH_MODEL_SUCCESS':
-            return {...state, modelList: action.modelList};
+            return {...state, loading: false, error: action.error};
 
         case 'FETCH_MODEL_REQUEST':
-            return{...state};
+            return{...state, loading: true};
+
+        case 'FETCH_MODEL_SUCCESS':
+            return {...state, loading: false, modelList: action.modelList};
 
         case 'FETCH_MODEL_FAILURE':
-            return {...state, error: action.error};
+            return {...state, loading: false, error: action.error};
 
         default:
             return state;

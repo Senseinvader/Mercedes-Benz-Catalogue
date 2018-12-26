@@ -1,6 +1,14 @@
 import React, {Component} from 'react';
+import {connect} from "react-redux";
+import {fetchBodyList} from '../actions/header-actions';
 
 class Header extends Component {
+
+
+     componentDidMount() {
+        const {onLoad} = this.props;
+        onLoad();
+     }
 
     render() {
         const {bodyList, modelList} = this.props;
@@ -48,6 +56,12 @@ class Header extends Component {
     }
 }
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onLoad: ()=> dispatch(fetchBodyList())
+    }
+}
 
 
-export default Header;
+
+export default connect(null, mapDispatchToProps)(Header);
