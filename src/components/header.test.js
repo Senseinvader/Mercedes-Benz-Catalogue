@@ -1,7 +1,8 @@
 import React from 'react';
-import Header, {mapStateToProps} from './header';
+import {Header, mapDispatchToProps, mapStateToProps} from './header';
 import {configure, shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
+import {fetchBodyList} from "../actions/header-actions";
 
 configure({ adapter: new Adapter() });
 
@@ -56,5 +57,13 @@ describe('Header component', () => {
         }
 
         expect(mapStateToProps(initialState).modelList).toEqual(['Empty']);
+    })
+
+    it('Should onLoad called', () => {
+        const dispatch = jest.fn();
+
+
+        mapDispatchToProps(dispatch).onLoad();
+        expect(dispatch).toHaveBeenCalled();
     })
 });

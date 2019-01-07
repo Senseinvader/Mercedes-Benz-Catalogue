@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
+import {fetchBodyList} from "../actions/header-actions";
+import {connect} from "react-redux";
 
-class Header extends Component {
+export class Header extends Component {
 
     render() {
         const {bodyList, modelList} = this.props;
@@ -55,6 +57,14 @@ export const mapStateToProps = (state) => {
     }
 };
 
+export const mapDispatchToProps = (dispatch) => {
+    return {
+        onLoad: () => {
+            dispatch(fetchBodyList());
+        }
+    }
+};
 
 
-export default Header;
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
