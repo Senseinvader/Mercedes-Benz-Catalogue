@@ -4,10 +4,10 @@ describe('tests of search reducer', () => {
 
     it('should return the initial state', () => {
         expect(headerReducer(undefined, {})).toEqual({
-            bodyList: [{bodyId: '', bodyName: 'Empty'}],
-            modelList: [{modelId: '', modelName: 'Empty'}],
-            loading: false,
-            error: null
+                bodyList: [{bodyId: '', bodyName: 'Empty'}],
+                modelList: [{modelId: '', modelName: 'Empty'}],
+                loading: false,
+                error: null
             });
     });
 
@@ -51,22 +51,22 @@ describe('tests of search reducer', () => {
            })
     });
 
-    it('should handle FETCH_MODEL_REQUEST', () => {
+    it('should handle FETCH_MODELS_REQUEST', () => {
        expect(
            headerReducer([], {
-               type: 'FETCH_MODEL_REQUEST'
+               type: 'FETCH_MODELS_REQUEST'
         })
        ).toEqual({
             loading: true
         })
     });
 
-    it('should handle FETCH_MODEL_SUCCESS', () => {
+    it('should handle FETCH_MODELS_SUCCESS', () => {
         const modelList = [{modelId: "13", modelName: "Sports Tourer"},
                            {modelId: "15", modelName: "Shooting Brake"}];
         expect(
             headerReducer([], {
-                type: 'FETCH_MODEL_SUCCESS',
+                type: 'FETCH_MODELS_SUCCESS',
                 modelList: modelList
             })
         ).toEqual({
@@ -75,12 +75,12 @@ describe('tests of search reducer', () => {
         })
     });
 
-    it('should handle FETCH_MODEL_FAILURE', () => {
+    it('should handle FETCH_MODELS_FAILURE', () => {
         const error = 'error!';
 
         expect(
             headerReducer([], {
-                type: 'FETCH_MODEL_FAILURE',
+                type: 'FETCH_MODELS_FAILURE',
                 error: error
             })
         ).toEqual({
