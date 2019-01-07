@@ -11,8 +11,7 @@ export class Header extends Component {
      }
 
     render() {
-        const {bodyList, modelList} = this.props;
-
+        const {bodyList, modelList, handleChangeBodyId} = this.props;
         const optionElement = (id, name, key) => {
             return (
                 <option value={id} key={key}>
@@ -39,7 +38,7 @@ export class Header extends Component {
                 <div className="logo-container">
 
                 </div>
-                <select className="body-select">
+                <select className="body-select" onChange={(e) => handleChangeBodyId(e.currentTarget.value)}>
                     {optionList(bodyList, 'bodyId', 'bodyName')}
                 </select>
 
@@ -64,8 +63,10 @@ export const mapDispatchToProps = (dispatch) => {
             console.log('in mapDispathcToProps');
             dispatch(fetchBodyList());
         },
-        handleModelsFetch: () => {
-            dispatch(fetchModelList());
+
+        handleChangeBodyId: (bodyId) => {
+            console.log(bodyId)
+            dispatch(fetchModelList(bodyId));
         }
     }
 };
