@@ -4,8 +4,8 @@ describe('tests of search reducer', () => {
 
     it('should return the initial state', () => {
         expect(headerReducer(undefined, {})).toEqual({
-                bodyList: [],
-                modelList: [],
+                bodyList: ['Empty'],
+                modelList: ['Empty'],
                 loading: false,
                 error: null
             });
@@ -63,7 +63,7 @@ describe('tests of search reducer', () => {
 
     it('should handle FETCH_MODEL_SUCCESS', () => {
         const modelList = [{modelId: "13", modelName: "Sports Tourer"},
-            {modelId: "15", modelName: "Shooting Brake"}]
+                           {modelId: "15", modelName: "Shooting Brake"}];
         expect(
             headerReducer([], {
                 type: 'FETCH_MODEL_SUCCESS',

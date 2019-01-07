@@ -56,15 +56,21 @@ export class Header extends Component {
     }
 }
 
+export const mapStateToProps = (state) => {
+    return {
+        bodyList: state.headerReducer.bodyList,
+        modelList: state.headerReducer.modelList
+    }
+};
+
 export const mapDispatchToProps = (dispatch) => {
     return {
-        onLoad: ()=> {
-            console.log('in mapDispatchToProps');
+        onLoad: () => {
             dispatch(fetchBodyList());
         }
     }
-}
+};
 
 
 
-export default connect(null, mapDispatchToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

@@ -1,8 +1,8 @@
 const initialState = {
-    bodyList: [],
-    modelList: [],
     loading: false,
-    error: null
+    error: null,
+    bodyList: ['Empty'],
+    modelList: ['Empty']
 };
 
 const headerReducer = (state = initialState, action) => {

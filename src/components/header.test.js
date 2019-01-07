@@ -1,6 +1,5 @@
 import React from 'react';
-import {Header, mapDispatchToProps} from './header';
-import {fetchBodyList} from '../actions/header-actions';
+import {Header, mapDispatchToProps, mapStateToProps} from './header';
 import {configure, shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import toJson from "enzyme-to-json";
@@ -44,8 +43,28 @@ describe('Header component', () => {
             expect(headerWithModelCar.containsMatchingElement(<option value={model.modelId}>{model.modelName}</option>)).toEqual(true)
         });
     });
-    
-    it('dispatches onLoad function via mapDispatchToProps', () => {
+
+    it('Should show empty bodyList', () => {
+        const initialState = {
+            headerReducer: {
+                bodyList: ['Empty']
+            }
+        };
+
+        expect(mapStateToProps(initialState).bodyList).toEqual(['Empty']);
+    });
+
+    it('Should show empty modelList', () => {
+        const initialState = {
+            headerReducer: {
+                modelList: ['Empty']
+            }
+        }
+
+        expect(mapStateToProps(initialState).modelList).toEqual(['Empty']);
+    })
+
+    it('Should dispatch onLoad function via mapDispatchToProps', () => {
         const dispatch = jest.fn();
         mapDispatchToProps(dispatch).onLoad();
         expect(dispatch).toHaveBeenCalled();
