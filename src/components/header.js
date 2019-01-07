@@ -29,14 +29,7 @@ export class Header extends Component {
                         }
                     </React.Fragment>
                 )
-            } 
-            // else {
-            //     return (
-            //         <option>
-            //             Empty
-            //         </option>
-            //     )
-            // }
+            }
         };
 
         return (
