@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {fetchBodyList, fetchModelList} from '../actions/header-actions';
+import {fetchBodyList, fetchModelList, fetchModelConfiguration} from '../actions/header-actions';
 
 export class Header extends Component {
 
@@ -10,7 +10,7 @@ export class Header extends Component {
      }
 
     render() {
-        const {bodyList, modelList, handleChangeBodyId} = this.props;
+        const {bodyList, modelList, handleChangeBodyId, handleChangeModelId} = this.props;
         const optionElement = (id, name, key) => {
             return (
                 <option value={id} key={key}>
@@ -42,7 +42,8 @@ export class Header extends Component {
                     {optionList(bodyList, 'bodyId', 'bodyName')}
                 </select>
 
-                <select className="model-select">
+                <select className="model-select" onChange={(e) => handleChangeModelId(e.currentTarget.value)}>
+                    <option value="0" selected disabled hidden>Choose model</option>
                     {optionList(modelList, 'modelId', 'modelName')}
                 </select>
             </div>
@@ -63,10 +64,11 @@ export const mapDispatchToProps = (dispatch) => {
             console.log('in mapDispathcToProps');
             dispatch(fetchBodyList());
         },
-
         handleChangeBodyId: (bodyId) => {
-            console.log(bodyId)
             dispatch(fetchModelList(bodyId));
+        },
+        handleChangeModelId: (modelId) => {
+            dispatch(fetchModelConfiguration(modelId))
         }
     }
 };
