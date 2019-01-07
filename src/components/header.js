@@ -5,13 +5,12 @@ import {fetchBodyList, fetchModelList} from '../actions/header-actions';
 export class Header extends Component {
 
      componentDidMount() {
-        console.log(this.props);
         const { onLoad } = this.props;
         window.addEventListener('load', onLoad);
      }
 
     render() {
-        const {bodyList, modelList} = this.props;
+        const {bodyList, modelList, handleOptionChange} = this.props;
 
         const optionElement = (id, name, key) => {
             return (
@@ -39,7 +38,7 @@ export class Header extends Component {
                 <div className="logo-container">
 
                 </div>
-                <select className="body-select">
+                <select className="body-select" onChange={(e) => handleOptionChange(e.currentTarget.value)}>
                     {optionList(bodyList, 'bodyId', 'bodyName')}
                 </select>
 
@@ -64,8 +63,8 @@ export const mapDispatchToProps = (dispatch) => {
             console.log('in mapDispathcToProps');
             dispatch(fetchBodyList());
         },
-        handleModelsFetch: () => {
-            dispatch(fetchModelList());
+        handleOptionChange: (bodyId) => {
+            dispatch(fetchModelList(bodyId));
         }
     }
 };

@@ -16,13 +16,14 @@ const headerReducer = (state = initialState, action) => {
         case 'FETCH_BODIES_FAILURE':
             return {...state, loading: false, error: action.error};
 
-        case 'FETCH_MODEL_REQUEST':
+        case 'FETCH_MODELS_REQUEST':
             return{...state, loading: true};
 
-        case 'FETCH_MODEL_SUCCESS':
+        case 'FETCH_MODELS_SUCCESS':
+        console.log(action.modelList);
             return {...state, loading: false, modelList: action.modelList};
 
-        case 'FETCH_MODEL_FAILURE':
+        case 'FETCH_MODELS_FAILURE':
             return {...state, loading: false, error: action.error};
 
         default:
