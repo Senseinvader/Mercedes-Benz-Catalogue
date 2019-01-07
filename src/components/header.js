@@ -38,6 +38,7 @@ export class Header extends Component {
 
                 </div>
                 <select className="body-select" onChange={(e) => handleChangeBodyId(e.currentTarget.value)}>
+                    <option value="0" selected disabled hidden>Choose body type</option>
                     {optionList(bodyList, 'bodyId', 'bodyName')}
                 </select>
 
