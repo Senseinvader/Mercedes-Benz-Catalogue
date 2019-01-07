@@ -59,7 +59,7 @@ describe('Header component', () => {
         expect(mapStateToProps(initialState).modelList).toEqual(['Empty']);
     })
 
-    it('Should onLoad called', () => {
+    it('Should dispatch onLoad function via mapDispatchToProps', () => {
         const dispatch = jest.fn();
 
 
