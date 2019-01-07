@@ -4,10 +4,10 @@ describe('tests of search reducer', () => {
 
     it('should return the initial state', () => {
         expect(headerReducer(undefined, {})).toEqual({
-                bodyList: ['Empty'],
-                modelList: ['Empty'],
-                loading: false,
-                error: null
+            bodyList: [{bodyId: '', bodyName: 'Empty'}],
+            modelList: [{modelId: '', modelName: 'Empty'}],
+            loading: false,
+            error: null
             });
     });
 

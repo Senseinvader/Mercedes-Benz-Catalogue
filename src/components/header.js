@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {fetchBodyList} from '../actions/header-actions';
+import {fetchBodyList, fetchModelList} from '../actions/header-actions';
 
 export class Header extends Component {
 
      componentDidMount() {
         console.log(this.props);
         const { onLoad } = this.props;
-        onLoad();
+        window.addEventListener('load', onLoad);
      }
 
     render() {
@@ -26,7 +26,8 @@ export class Header extends Component {
                 return (
                     <React.Fragment>
                         {elementList.map((element, key) => {
-                            return optionElement(element[idLabel], element[nameLabel], key);})
+                            return optionElement(element[idLabel], element[nameLabel], key);
+                            })
                         }
                     </React.Fragment>
                 )
@@ -62,10 +63,13 @@ export const mapDispatchToProps = (dispatch) => {
         onLoad: () => {
             console.log('in mapDispathcToProps');
             dispatch(fetchBodyList());
+        },
+        handleModelsFetch: () => {
+            dispatch(fetchModelList());
         }
     }
 };
 
 
 
-export default Header = connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

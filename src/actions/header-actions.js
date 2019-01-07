@@ -1,10 +1,7 @@
-import {API_KEY} from '../non-export-data/api-key';
 import {getBodiesList} from '../model/body';
 import {getBodiesQuery, getModelConfigurationQuery, getModelsQuery} from './apiQueries';
 import {getModelSnippettsList} from "../model/carModelSnippet";
 import {getCarModel} from "../model/carModel";
-import CarModel from "../model/carModel";
-import {modelConfigurationHeader} from "./body-jsons";
 
 export const fetchBodiesRequest = () => ({
     type: 'FETCH_BODIES_REQUEST'
