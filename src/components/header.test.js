@@ -1,5 +1,6 @@
 import React from 'react';
-import {Header} from './header';
+import {Header, mapDispatchToProps} from './header';
+import {fetchBodyList} from '../actions/header-actions';
 import {configure, shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import toJson from "enzyme-to-json";
@@ -10,9 +11,9 @@ configure({ adapter: new Adapter() });
 describe('Header component', () => {
     const wrapper = shallow(<Header/>);
 
-    it('renders', () => {
-        const component = wrapper.dive();
-        expect(toJson(component)).toMatchSnapshot();
+    it('renders itself', () => {
+        // const component = wrapper.dive();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('has one div', () => {
@@ -42,5 +43,11 @@ describe('Header component', () => {
         modelList.forEach((model) => {
             expect(headerWithModelCar.containsMatchingElement(<option value={model.modelId}>{model.modelName}</option>)).toEqual(true)
         });
+    });
+    
+    it('dispatches onLoad function via mapDispatchToProps', () => {
+        const dispatch = jest.fn();
+        mapDispatchToProps(dispatch).onLoad();
+        expect(dispatch).toHaveBeenCalled();
     });
 });
