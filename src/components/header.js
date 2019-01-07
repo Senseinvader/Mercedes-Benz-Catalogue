@@ -5,8 +5,9 @@ import {fetchBodyList} from '../actions/header-actions';
 export class Header extends Component {
 
      componentDidMount() {
+        console.log(this.props);
         const { onLoad } = this.props;
-        window.addEventListener('load', onLoad);
+        onLoad();
      }
 
     render() {
@@ -29,14 +30,7 @@ export class Header extends Component {
                         }
                     </React.Fragment>
                 )
-            } 
-            // else {
-            //     return (
-            //         <option>
-            //             Empty
-            //         </option>
-            //     )
-            // }
+            }
         };
 
         return (
@@ -66,6 +60,7 @@ export const mapStateToProps = (state) => {
 export const mapDispatchToProps = (dispatch) => {
     return {
         onLoad: () => {
+            console.log('in mapDispathcToProps');
             dispatch(fetchBodyList());
         }
     }
@@ -73,4 +68,4 @@ export const mapDispatchToProps = (dispatch) => {
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default Header = connect(mapStateToProps, mapDispatchToProps)(Header);
