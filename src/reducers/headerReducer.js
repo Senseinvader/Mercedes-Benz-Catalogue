@@ -3,7 +3,22 @@ const initialState = {
     error: null,
     bodyList: [{bodyId: '', bodyName: 'Empty'}],
     modelList: [{modelId: '', modelName: 'Empty'}],
-    modelConfiguration: null
+    modelConfiguration: {
+        modelId: '',
+        configurationId: '',
+        price: '',
+        currency: '',
+        power: '',
+        powerUnit: '',
+        capacity: '',
+        capacityUnit: '',
+        topSpeed: '',
+        topSpeedUnit: '',
+        acceleration: '',
+        accelerationUnit: '',
+        interPhotoUrl: '',
+        outerPhotoUrl: ''
+    }
 };
 
 const headerReducer = (state = initialState, action) => {
