@@ -1,11 +1,20 @@
 import React, {Component} from 'react';
-import {changeImage} from '../actions/sliderActions';
+import {changeImage, fetchModelConfigurationImages} from '../actions/sliderActions';
 import {connect} from "react-redux";
+import {carModel} from "../actions/body-jsons";
 
 export class Slider extends Component {
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+            const {picturesUrl, model, handleLoadImages} = this.props;
+            if (prevProps.picturesUrl != picturesUrl) {
+                handleLoadImages(model, picturesUrl);
+            }
+    }
+
     render() {
-        const {arr, exterior, handleChangeImage} = this.props;
-        if (arr === undefined) {
+        const {interPhoto, outerPhoto, exterior, handleChangeImage, picturesUrl, model, handleLoadImages} = this.props;
+        if (interPhoto === undefined) {
             return (
                 <div className="slider-container">
                     <div className="slider fade">
@@ -20,7 +29,7 @@ export class Slider extends Component {
         return(
             <div className="slider-container">
                 <div className="slider fade">
-                    <img src={exterior ? arr[0] : arr[1]} alt="Mercedes" onClick={handleChangeImage} />
+                    <img src={exterior ? interPhoto : outerPhoto} alt="Mercedes" onClick={handleChangeImage} />
                     <div className="comment">Test</div>
                 </div>
             </div>
@@ -30,14 +39,18 @@ export class Slider extends Component {
 
 export const mapStateToProps = (state) => {
     return {
-        arr: state.imagesArray,
-        exterior: state.exterior
+        interPhoto: state.headerReducer.modelConfiguration.interPhoto,
+        outerPhoto: state.headerReducer.modelConfiguration.outerPhoto,
+        exterior: state.sliderReducer.exterior,
+        picturesUrl: state.headerReducer.picturesUrl,
+        model: state.headerReducer.modelConfiguration
     }
 };
 
 export const mapDispatchToProps = (dispatch) => {
     return {
-        handleChangeImage: () => dispatch(changeImage())
+        handleChangeImage: () => dispatch(changeImage()),
+        handleLoadImages: (model, picturesUrl) => dispatch(fetchModelConfigurationImages(model, picturesUrl))
     }
 };
 

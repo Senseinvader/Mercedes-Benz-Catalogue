@@ -29,10 +29,10 @@ export const fetchModelsFailure = (error) => ({
     error
 });
 
-export const fetchModelConfigurationSuccess = (modelConfiguration) => ({
+export const fetchModelConfigurationSuccess = (modelConfiguration, picturesUrl) => ({
     type: 'FETCH_MODEL_CONFIGURATION_SUCCESS',
-    modelConfiguration
-
+    modelConfiguration,
+    picturesUrl
 });
 
 export const fetchModelConfigurationFailure = (error) => ({
@@ -69,24 +69,20 @@ export const fetchModelConfiguration = (modelId) => {
         dispatch(fetchModelConfigurationRequest());
         return fetch(getModelConfigurationQuery(modelId))
             .then(res => res.json())
-            .then(body => dispatch(fetchModelConfigurationSuccess(getCarModel(body))))
-            // .then(body => (Promise(() => {
-            //     return fetchModelConfigurationImages(getCarModel(body), body._links.image);
-            //     })
-            // ))
+            .then(body => dispatch(fetchModelConfigurationSuccess(getCarModel(body), body._links.image)))
             // .then(body => dispatch(fetchModelConfigurationImages(getCarModel(body), body._links.image)))
             .catch(error => dispatch(fetchModelConfigurationFailure('Error: Mistake in query', error)));
     }
 };
 
-export const fetchModelConfigurationImages = (carModel, url) => {
-    return dispatch => {
-        return fetch(url)
-            .then(res => res.json())
-            .then(body => {
-                carModel.interPhoto = body.vehicle.INT1.url;
-                carModel.outerPhoto = body.vehicle.EXT020.url;
-                dispatch(fetchModelConfigurationSuccess(carModel));
-            })
-    }
-}
+// export const fetchModelConfigurationImages = (carModel, url) => {
+//     return dispatch => {
+//         return fetch(url)
+//             .then(res => res.json())
+//             .then(body => {
+//                 carModel.interPhoto = body.vehicle.INT1.url;
+//                 carModel.outerPhoto = body.vehicle.EXT020.url;
+//                 dispatch(fetchModelConfigurationSuccess(carModel));
+//             })
+//     }
+// }

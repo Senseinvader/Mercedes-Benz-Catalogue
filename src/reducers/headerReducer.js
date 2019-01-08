@@ -6,13 +6,14 @@ const initialState = {
     bodyList: [{bodyId: '', bodyName: 'Empty'}],
     modelList: [{modelId: '', modelName: 'Empty'}],
     configurationLoaded: false,
-    modelConfiguration: new CarModel()
+    modelConfiguration: new CarModel(),
+    picturesUrl: undefined,
 };
 
 const headerReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'FETCH_BODIES_REQUEST':
-            return {...state, loading: true};
+            return {...state, loading: true, modelConfiguration: new CarModel()};
 
         case 'FETCH_BODIES_SUCCESS':
             return {...state, loading: false, bodyList: action.bodyList};
@@ -33,7 +34,7 @@ const headerReducer = (state = initialState, action) => {
             return{...state, loading: true, configurationLoaded: false};
 
         case 'FETCH_MODEL_CONFIGURATION_SUCCESS':
-            return {...state, loading: false, modelConfiguration: action.modelConfiguration, configurationLoaded: true};
+            return {...state, loading: false, modelConfiguration: action.modelConfiguration, configurationLoaded: true, picturesUrl: action.picturesUrl};
 
         case 'FETCH_MODEL_CONFIGURATION_FAILURE':
             return {...state, loading: false, error: action.error};
