@@ -5,10 +5,7 @@ import {connect} from "react-redux";
 class SideBlock extends Component {
 
     render() {
-        // const {price, currency, power, powerUnit,
-        //     capacity, capacityUnit, topSpeed, topSpeedUnit, acceleration, accelerationUnit} = this.props;
             const {modelConfiguration} = this.props;
-            console.log(modelConfiguration);
         return(
             <div className="data-container">
                 <div className='char price'><h3>{modelConfiguration.price} {modelConfiguration.currency}</h3></div>
