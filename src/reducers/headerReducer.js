@@ -1,28 +1,15 @@
+import CarModel from "../model/carModel";
+
 const initialState = {
     loading: false,
     error: null,
     bodyList: [{bodyId: '', bodyName: 'Empty'}],
     modelList: [{modelId: '', modelName: 'Empty'}],
-    modelConfiguration: {
-        modelId: '',
-        configurationId: '',
-        price: '',
-        currency: '',
-        power: '',
-        powerUnit: '',
-        capacity: '',
-        capacityUnit: '',
-        topSpeed: '',
-        topSpeedUnit: '',
-        acceleration: '',
-        accelerationUnit: '',
-        interPhotoUrl: '',
-        outerPhotoUrl: ''
-    }
+    configurationLoaded: false,
+    modelConfiguration: new CarModel()
 };
 
 const headerReducer = (state = initialState, action) => {
-    console.log(action)
     switch (action.type) {
         case 'FETCH_BODIES_REQUEST':
             return {...state, loading: true};
@@ -43,10 +30,10 @@ const headerReducer = (state = initialState, action) => {
             return {...state, loading: false, error: action.error};
 
         case 'FETCH_MODEL_CONFIGURATION_REQUEST':
-            return{...state, loading: true};
+            return{...state, loading: true, configurationLoaded: false};
 
         case 'FETCH_MODEL_CONFIGURATION_SUCCESS':
-            return {...state, loading: false, modelConfiguration: action.modelConfiguration};
+            return {...state, loading: false, modelConfiguration: action.modelConfiguration, configurationLoaded: true};
 
         case 'FETCH_MODEL_CONFIGURATION_FAILURE':
             return {...state, loading: false, error: action.error};

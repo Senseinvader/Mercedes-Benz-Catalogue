@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
-class Description extends Component {
+export class Description extends Component {
     render() {
         const {exterior} = this.props;
         return (

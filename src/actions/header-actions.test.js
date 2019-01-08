@@ -81,8 +81,8 @@ describe('Header actions', () => {
         });
 
         const expectedCarModel = carModel;
-        expectedCarModel.interPhoto = interExamplePhoto;
-        expectedCarModel.outerPhoto = outherExamplePhoto;
+        // expectedCarModel.interPhoto = interExamplePhoto;
+        // expectedCarModel.outerPhoto = outherExamplePhoto;
         const expectedData = [
             {
                 type: 'FETCH_MODEL_CONFIGURATION_SUCCESS',

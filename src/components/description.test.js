@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow, configure} from 'enzyme';
-import Description from './description';
+import {Description} from './description';
 import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
 
@@ -18,13 +18,13 @@ describe('Description component', () => {
         const displaySetting = {exterior: true};
         const description = {interiorDesc: 'interior', exteriorDesc: 'exterior'};
         const wrapper = shallow(<Description {...displaySetting} {...description} />)
-        expect(wrapper.find('div h3').text()).toBe('exterior');
+        expect(wrapper.find('div h3').text()).toBe('This is exterior photo');
     });
     it('renders inter description when exterior flag is false', () => {
         const displaySetting = {exterior: false};
         const description = {interiorDesc: 'interior', exteriorDesc: 'exterior'};
         const wrapper = shallow(<Description {...displaySetting} {...description} />)
-        expect(wrapper.find('div h3').text()).toBe('interior');
+        expect(wrapper.find('div h3').text()).toBe('This is interior photo');
     });
     //test snapshot
     it('matches the snapshot', () => {

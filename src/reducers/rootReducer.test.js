@@ -2,6 +2,7 @@ import {configure} from "enzyme/build";
 import Adapter from "enzyme-adapter-react-16/build";
 import {createStore} from "redux";
 import rootReducer from "./rootReducer";
+import CarModel from "../model/carModel";
 
 configure({ adapter: new Adapter() });
 
@@ -14,9 +15,10 @@ describe('Root reducer', () => {
             bodyList: [{bodyId: '', bodyName: 'Empty'}],
             modelList: [{modelId: '', modelName: 'Empty'}],
             loading: false,
-            error: null
+            error: null,
+            modelConfiguration: new CarModel(),
+            configurationLoaded: false
         });
-        console.log(store.getState().headerReducer)
     });
 
     it('Should contains sliderReducer', () => {

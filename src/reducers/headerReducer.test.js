@@ -1,4 +1,5 @@
 import headerReducer from "./headerReducer";
+import CarModel from "../model/carModel";
 
 describe('tests of search reducer', () => {
 
@@ -7,7 +8,9 @@ describe('tests of search reducer', () => {
                 bodyList: [{bodyId: '', bodyName: 'Empty'}],
                 modelList: [{modelId: '', modelName: 'Empty'}],
                 loading: false,
-                error: null
+                error: null,
+                modelConfiguration: new CarModel(),
+                configurationLoaded: false
             });
     });
 

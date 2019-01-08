@@ -50,7 +50,7 @@ export const fetchBodyList = () => {
         return fetch(getBodiesQuery)
             .then(res => res.json())
             .then(body => dispatch(fetchBodiesSuccess(getBodiesList(body))))
-            .catch(error => dispatch(fetchBodiesFailure('Error: Mistake in query ', error)));
+            .catch(error => dispatch(fetchBodiesFailure('Error: Mistake in query', error)));
     }
 };
 
@@ -60,7 +60,7 @@ export const fetchModelList = (bodyId) => {
         return fetch(getModelsQuery(bodyId))
             .then(res => res.json())
             .then(body => dispatch(fetchModelsSuccess(getModelSnippettsList(body))))
-            .catch(error => dispatch(fetchModelsFailure('Error: Mistake in query ', error)));
+            .catch(error => dispatch(fetchModelsFailure('Error: Mistake in query', error)));
     }
 };
 
@@ -75,7 +75,7 @@ export const fetchModelConfiguration = (modelId) => {
             //     })
             // ))
             // .then(body => dispatch(fetchModelConfigurationImages(getCarModel(body), body._links.image)))
-            .catch(error => dispatch(fetchModelConfigurationFailure('Error: Mistake in query ', error)));
+            .catch(error => dispatch(fetchModelConfigurationFailure('Error: Mistake in query', error)));
     }
 };
 
