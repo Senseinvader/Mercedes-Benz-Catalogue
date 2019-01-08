@@ -70,6 +70,10 @@ export const fetchModelConfiguration = (modelId) => {
         return fetch(getModelConfigurationQuery(modelId))
             .then(res => res.json())
             .then(body => dispatch(fetchModelConfigurationSuccess(getCarModel(body))))
+            // .then(body => (Promise(() => {
+            //     return fetchModelConfigurationImages(getCarModel(body), body._links.image);
+            //     })
+            // ))
             // .then(body => dispatch(fetchModelConfigurationImages(getCarModel(body), body._links.image)))
             .catch(error => dispatch(fetchModelConfigurationFailure('Error: Mistake in query ', error)));
     }
