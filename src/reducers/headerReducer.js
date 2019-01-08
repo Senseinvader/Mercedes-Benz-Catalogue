@@ -2,7 +2,8 @@ const initialState = {
     loading: false,
     error: null,
     bodyList: [{bodyId: '', bodyName: 'Empty'}],
-    modelList: [{modelId: '', modelName: 'Empty'}]
+    modelList: [{modelId: '', modelName: 'Empty'}],
+    modelConfiguration: null
 };
 
 const headerReducer = (state = initialState, action) => {
@@ -24,6 +25,15 @@ const headerReducer = (state = initialState, action) => {
             return {...state, loading: false, modelList: action.modelList};
 
         case 'FETCH_MODELS_FAILURE':
+            return {...state, loading: false, error: action.error};
+
+        case 'FETCH_MODEL_CONFIGURATION_REQUEST':
+            return{...state, loading: true};
+
+        case 'FETCH_MODEL_CONFIGURATION_SUCCESS':
+            return {...state, loading: false, modelConfiguration: action.modelConfiguration};
+
+        case 'FETCH_MODEL_CONFIGURATION_FAILURE':
             return {...state, loading: false, error: action.error};
 
         default:

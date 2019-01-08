@@ -1,8 +1,7 @@
 export default class CarModel {
 
     constructor(modelId, configurationId, price, currency, exteriorDesc, interiorDesc,
-                fuelConsumption, fuelConsumptionUnit, power,
-                powerUnit, capacity, capacityUnit, topSpeed, topSpeedUnit,
+                power, powerUnit, capacity, capacityUnit, topSpeed, topSpeedUnit,
                 acceleration, accelerationUnit, interPhotoUrl, outerPhotoUrl) {
         this.modelId = modelId;
         this.configurationId = configurationId;
@@ -10,8 +9,6 @@ export default class CarModel {
         this.currency = currency;
         this.exteriorDesc = exteriorDesc;
         this.interiorDesc = interiorDesc;
-        this.fuelConsumption = fuelConsumption;
-        this.fuelConsumptionUnit = fuelConsumptionUnit;
         this.power = power;
         this.powerUnit = powerUnit;
         this.capacity = capacity;
@@ -26,6 +23,7 @@ export default class CarModel {
 }
 
 export const getCarModel = (model) => {
+    console.log(model);
     return new CarModel(
         model.modelId,
         model.configurationId,
@@ -33,8 +31,6 @@ export const getCarModel = (model) => {
         model.configurationPrice.currency,
         model.vehicleComponents[0].description,         //exterior description
         model.vehicleComponents[1].description,         //interior description
-        model.technicalInformation.engine.fuelEconomy.fuelConsumptionCombinedMin.value,
-        model.technicalInformation.engine.fuelEconomy.fuelConsumptionCombinedMin.unit,
         model.technicalInformation.engine.powerHp.value,
         model.technicalInformation.engine.powerHp.unit,
         model.technicalInformation.engine.capacity.value,

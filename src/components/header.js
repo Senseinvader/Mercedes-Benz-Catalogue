@@ -38,12 +38,12 @@ export class Header extends Component {
 
                 </div>
                 <select className="body-select" onChange={(e) => handleChangeBodyId(e.currentTarget.value)}>
-                    <option value="0" selected disabled hidden>Choose body type</option>
+                    <option selected disabled hidden>Choose body type</option>
                     {optionList(bodyList, 'bodyId', 'bodyName')}
                 </select>
 
                 <select className="model-select" onChange={(e) => handleChangeModelId(e.currentTarget.value)}>
-                    <option value="0" selected disabled hidden>Choose model</option>
+                    <option selected disabled hidden>Choose model</option>
                     {optionList(modelList, 'modelId', 'modelName')}
                 </select>
             </div>
