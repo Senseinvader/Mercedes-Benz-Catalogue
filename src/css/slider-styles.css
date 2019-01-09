@@ -1,11 +1,15 @@
 .slider-container {
-    padding: 0 15px 0 0;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-content: center;
+    padding: 7px 15px 0 0;
     width: 50em;
 }
 
 .slider-container img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .flex-wrapper {
@@ -13,7 +17,7 @@
     justify-content: space-around;
 }
 .char {
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 
 .description-wrapper {
