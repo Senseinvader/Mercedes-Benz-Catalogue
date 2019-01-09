@@ -24,7 +24,7 @@ export class Slider extends Component {
 
         return(
             <div className="slider-container">
-                <img src={exterior ? interPhoto : outerPhoto} alt="Mercedes" onClick={handleChangeImage} />
+                <img src={exterior ? outerPhoto : interPhoto} alt="Mercedes" onClick={handleChangeImage} />
             </div>
         );
     };

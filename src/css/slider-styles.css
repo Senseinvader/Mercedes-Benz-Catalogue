@@ -1,6 +1,6 @@
 .slider-container {
     padding: 0 15px 0 0;
-    width: 55em;
+    width: 50em;
 }
 
 .slider-container img {
@@ -13,5 +13,10 @@
     justify-content: space-around;
 }
 .char {
-    font-size: 1.4em;
+    font-size: 1em;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
 }

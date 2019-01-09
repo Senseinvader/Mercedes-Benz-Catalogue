@@ -7,9 +7,9 @@ export class Description extends Component {
         if (configurationLoaded) {
             return (
                 <div className='description'>
-                    <h3>
-                        {exterior ? "This is exterior photo" : "This is interior photo"}
-                    </h3>
+                    <h6>
+                        {exterior ? "This is the exterior photo" : "This is the interior photo"}
+                    </h6>
                 </div>
             );
         } else {
