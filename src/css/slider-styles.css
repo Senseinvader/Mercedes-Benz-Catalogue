@@ -1,6 +1,6 @@
 .slider-container {
     padding: 0 15px 0 0;
-    width: 55em;
+    width: 50em;
 }
 
 .slider-container img {
@@ -20,4 +20,5 @@
     display: flex;
     justify-content: space-between;
     padding: 0 15px 0 0;
+
 }
