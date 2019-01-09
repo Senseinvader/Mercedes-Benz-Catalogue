@@ -1,6 +1,6 @@
 .slider-container {
-    padding: 15px;
-    width: 60em;
+    padding: 0 15px 0 0;
+    width: 55em;
 }
 
 .slider-container img {
