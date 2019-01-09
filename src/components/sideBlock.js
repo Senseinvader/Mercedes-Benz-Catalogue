@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import { stat } from 'fs';
 
 
 export class SideBlock extends Component {
@@ -10,11 +9,11 @@ export class SideBlock extends Component {
         if (configurationLoaded){
             return(
                 <div className="data-container">
-                    <div className='char price'><h3>Price: {modelConfiguration.price} {modelConfiguration.currency}</h3></div>
-                    <div className='char power'><h3>Power: {modelConfiguration.power} {modelConfiguration.powerUnit}</h3></div>
-                    <div className='char capacity'><h3>Capacity: {modelConfiguration.capacity} {modelConfiguration.capacityUnit}</h3></div>
-                    <div className='char speed'><h3>Top speed: {modelConfiguration.topSpeed} {modelConfiguration.topSpeedUnit}</h3></div>
-                    <div className='char acceleration'><h3>Acceleration:{modelConfiguration.acceleration} {modelConfiguration.accelerationUnit}</h3></div>
+                    <div className='char price'><p>Price: {modelConfiguration.price} {modelConfiguration.currency}</p></div>
+                    <div className='char power'><p>Power: {modelConfiguration.power} {modelConfiguration.powerUnit}</p></div>
+                    <div className='char capacity'><p>Capacity: {modelConfiguration.capacity} {modelConfiguration.capacityUnit}</p></div>
+                    <div className='char speed'><p>Top speed: {modelConfiguration.topSpeed} {modelConfiguration.topSpeedUnit}</p></div>
+                    <div className='char acceleration'><p>Acceleration:{modelConfiguration.acceleration} {modelConfiguration.accelerationUnit}</p></div>
                 </div>
             );
         } else {

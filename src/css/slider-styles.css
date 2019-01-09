@@ -1,0 +1,17 @@
+.slider-container {
+    padding: 15px;
+    width: 60em;
+}
+
+.slider-container img {
+    width: 100%;
+    height: auto;
+}
+
+.flex-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+.char {
+    font-size: 1.4em;
+}

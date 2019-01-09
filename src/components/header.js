@@ -1,15 +1,23 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {fetchBodyList, fetchModelList, fetchModelConfiguration} from '../actions/header-actions';
+import M from 'materialize-css/dist/js/materialize.min.js'
 
 export class Header extends Component {
 
      componentDidMount() {
         const { onLoad } = this.props;
         window.addEventListener('load', onLoad);
+        M.AutoInit();
+     }
+     componentDidUpdate(prevProps) {
+         if(this.props != prevProps) {
+            M.AutoInit();
+         }
      }
 
     render() {
+        
         const {bodyList, modelList, handleChangeBodyId, handleChangeModelId} = this.props;
         const optionElement = (id, name, key) => {
             return (
@@ -33,19 +41,23 @@ export class Header extends Component {
         };
 
         return (
-            <div className="header-container">
+            <div className="header-container row">
                 <div className="logo-container">
 
                 </div>
-                <select className="body-select" onChange={(e) => handleChangeBodyId(e.currentTarget.value)}>
-                    <option selected disabled hidden>Choose body type</option>
-                    {optionList(bodyList, 'bodyId', 'bodyName')}
-                </select>
+                <div className="input-field col s6">
+                    <select className="body-select" onChange={(e) => handleChangeBodyId(e.currentTarget.value)}>
+                        <option value='' selected disabled>Choose body type</option>
+                        {optionList(bodyList, 'bodyId', 'bodyName')}
+                    </select>
+                </div>
 
-                <select className="model-select" onChange={(e) => handleChangeModelId(e.currentTarget.value)}>
-                    <option selected disabled hidden>Choose model</option>
-                    {optionList(modelList, 'modelId', 'modelName')}
-                </select>
+                <div className="input-field col s6">
+                    <select className="model-select" onChange={(e) => handleChangeModelId(e.currentTarget.value)}>
+                        <option selected disabled>Choose model</option>
+                        {optionList(modelList, 'modelId', 'modelName')}
+                    </select>
+                </div>
             </div>
         )
     }

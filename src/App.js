@@ -3,14 +3,18 @@ import Header from './components/header';
 import SideBlock from './components/sideBlock';
 import DescriptionComp from './components/description';
 import Slider from './components/slider';
+import 'materialize-css/dist/css/materialize.min.css';
+import './css/slider-styles.css';
 
 class App extends Component {
   render() {
     return (
         <div className="App">
             <Header/>
-            <SideBlock/>
-            <Slider/>
+            <div className='flex-wrapper'>
+                <SideBlock/>
+                <Slider/>
+            </div>
             <DescriptionComp/>
         </div>
     );

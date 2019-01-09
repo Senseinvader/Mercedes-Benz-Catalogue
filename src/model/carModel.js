@@ -23,7 +23,7 @@ export default class CarModel {
 }
 
 export const getCarModel = (model) => {
-    console.log(model);
+    console.log('model', model);
     return new CarModel(
         model.modelId,
         model.configurationId,
