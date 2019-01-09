@@ -15,3 +15,9 @@
 .char {
     font-size: 1.4em;
 }
+
+.description-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px 0 0;
+}
