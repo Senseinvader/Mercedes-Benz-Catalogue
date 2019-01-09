@@ -9,8 +9,7 @@ export class SideBlock extends Component {
         console.log('configuartion', modelConfiguration);
         if (configurationLoaded){
             return(
-                <div className="data-container row">
-                    <div className='col s12'>
+                <div className="data-container">
                         <div className='card-panel grey darken-3'>
                             <div className='char price white-text'><p>Price: <b>{modelConfiguration.price} {modelConfiguration.currency}</b></p></div>
                             <div className='char doors white-text'><p>Number of doors: <b>{modelConfiguration.doors}</b></p></div>
@@ -22,7 +21,7 @@ export class SideBlock extends Component {
                             <div className='char speed white-text'><p>Top speed: <b>{modelConfiguration.topSpeed} {modelConfiguration.topSpeedUnit}</b></p></div>
                             <div className='char acceleration white-text'><p>Acceleration: <b>{modelConfiguration.acceleration} {modelConfiguration.accelerationUnit}</b></p></div>
                         </div>
-                    </div>
+                    
                 </div>
             );
         } else {
