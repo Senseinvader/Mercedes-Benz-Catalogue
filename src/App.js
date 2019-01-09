@@ -13,9 +13,12 @@ class App extends Component {
             <Header/>
             <div className='flex-wrapper'>
                 <SideBlock/>
-                <Slider/>
+                <div className='left-side-wrapper'>
+                    <Slider/>
+                    <DescriptionComp/>
+                </div>
             </div>
-            <DescriptionComp/>
+            
         </div>
     );
   }
