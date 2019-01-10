@@ -43,20 +43,20 @@ describe('Slider component', () => {
     };
     it('src tag node renders src correctly', () => {
         const wrapper = shallow(<Slider {...props} />);
-        expect(wrapper.find('img').props().src).toBe('exterior.jpg');
+        expect(wrapper.find('img').props().src).toBe('interior.jpg');
     });
     //comment switches depending on props exterior=false
     it('switches pictures depending on exterior prop', () => {
         const wrapper = shallow(<Slider {...props}/>);
-        expect(wrapper.find('img').props().src).toBe('exterior.jpg');
-        wrapper.setProps({exterior: true});
         expect(wrapper.find('img').props().src).toBe('interior.jpg');
+        wrapper.setProps({exterior: true});
+        expect(wrapper.find('img').props().src).toBe('exterior.jpg');
     });
 
     //test switch in between images forward
     it('click on the picture calls the handleChangeImage', () => {
         const wrapper = shallow(<Slider {...props}/>);
-        expect(wrapper.find('img').props().src).toBe('exterior.jpg');
+        expect(wrapper.find('img').props().src).toBe('interior.jpg');
         wrapper.find('img').simulate('click');
         expect(props.handleChangeImage.mock.calls.length).toEqual(1);
     });
