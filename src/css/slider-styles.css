@@ -22,7 +22,21 @@
 
 .description-wrapper {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     padding: 0 15px 0 0;
 
+}
+
+.component-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px 0 0;
+}
+
+.title-description {
+    text-align: center;
+}
+
+.component {
+    padding-top: 15px;
 }
