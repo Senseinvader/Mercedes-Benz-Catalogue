@@ -17,9 +17,9 @@ export class Description extends Component {
         if (configurationLoaded) {
             return (
                 <div className='description-wrapper'>
-                    <a className="waves-effect waves-light btn-large" onClick={changeToPreviousDescription}>&lt;</a>
+                    <a className="waves-effect grey darken-3 btn-large" onClick={changeToPreviousDescription}>&lt;</a>
                     <div>{description}</div>
-                    <a className="waves-effect waves-light btn-large" onClick={changeToNextDescription}>&gt;</a>
+                    <a className="waves-effect grey darken-3 btn-large" onClick={changeToNextDescription}>&gt;</a>
                 </div>
             );
         } else {
