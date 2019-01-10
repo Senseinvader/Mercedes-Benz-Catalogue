@@ -18,7 +18,7 @@ export class Header extends Component {
 
     render() {
         
-        const {bodyList, modelList, handleChangeBodyId, handleChangeModelId} = this.props;
+        const {bodyList, modelList, handleChangeBodyId, handleChangeModelId, bodyLoaded, modelLoaded} = this.props;
         const optionElement = (id, name, key) => {
             return (
                 <option value={id} key={key}>
@@ -46,14 +46,14 @@ export class Header extends Component {
 
                 </div>
                 <div className="input-field col s6">
-                    <select className="body-select" onChange={(e) => handleChangeBodyId(e.currentTarget.value)}>
+                    <select className="body-select" onChange={(e) => handleChangeBodyId(e.currentTarget.value)} disabled={bodyLoaded}>
                         <option value='' selected disabled>Choose body type</option>
                         {optionList(bodyList, 'bodyId', 'bodyName')}
                     </select>
                 </div>
 
                 <div className="input-field col s6">
-                    <select className="model-select" onChange={(e) => handleChangeModelId(e.currentTarget.value)}>
+                    <select className="model-select" onChange={(e) => handleChangeModelId(e.currentTarget.value)} disabled={modelLoaded}>
                         <option selected disabled>Choose model</option>
                         {optionList(modelList, 'modelId', 'modelName')}
                     </select>
@@ -66,7 +66,9 @@ export class Header extends Component {
 export const mapStateToProps = (state) => {
     return {
         bodyList: state.headerReducer.bodyList,
-        modelList: state.headerReducer.modelList
+        modelList: state.headerReducer.modelList,
+        bodyLoaded: state.headerReducer.bodyLoaded,
+        modelLoaded: state.headerReducer.modelLoaded
     }
 };
 

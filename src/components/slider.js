@@ -17,17 +17,9 @@ export class Slider extends Component {
         if (!interPhoto && !outerPhoto) {
             return (
                 <div className="slider-container">
-                    <p>Photo placeholder</p>
-                </div>
-            );
-        } else if (!interPhoto && outerPhoto) {
-            return (
-                <div className="slider-container">
-                    <p>Image is not provided</p>
                 </div>
             );
         }
-
         return(
             <div className="slider-container">
                 <img src={exterior ? outerPhoto : interPhoto} alt="Mercedes" onClick={handleChangeImage} />
