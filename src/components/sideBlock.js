@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import { stat } from 'fs';
-
 
 export class SideBlock extends Component {
 

@@ -9,7 +9,6 @@ import {
 } from "./body-jsons";
 import fetchMock from "fetch-mock";
 import CarModel from "../model/carModel";
-import * as headerActions from "./header-actions";
 import thunk from "redux-thunk";
 
 const middleware = [thunk];

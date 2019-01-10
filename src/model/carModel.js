@@ -7,8 +7,6 @@ export default class CarModel {
         this.configurationId = configurationId;
         this.price = price;
         this.currency = currency;
-        // this.exteriorDesc = exteriorDesc;
-        // this.interiorDesc = interiorDesc;
         this.power = power;
         this.powerUnit = powerUnit;
         this.capacity = capacity;
@@ -29,8 +27,6 @@ export const getCarModel = (model) => {
         model.configurationId,
         model.configurationPrice.price,
         model.configurationPrice.currency,
-        // model.vehicleComponents[0].description,         //exterior description
-        // model.vehicleComponents[1].description,         //interior description
         model.technicalInformation.engine.powerHp.value,
         model.technicalInformation.engine.powerHp.unit,
         model.technicalInformation.engine.capacity.value,

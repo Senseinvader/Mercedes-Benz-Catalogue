@@ -13,7 +13,7 @@ export class Slider extends Component {
     }
 
     render() {
-        const {interPhoto, outerPhoto, exterior, handleChangeImage, picturesUrl, model, handleLoadImages} = this.props;
+        const {interPhoto, outerPhoto, exterior, handleChangeImage} = this.props;
         if (interPhoto === undefined) {
             return (
                 <div className="slider-container">

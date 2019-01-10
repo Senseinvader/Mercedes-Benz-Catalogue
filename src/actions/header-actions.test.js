@@ -7,10 +7,9 @@ import {
     bodyListExample,
     carModel,
     carModelImages,
-    expectedDataOfModelConfiguration, interExamplePhoto, linkInterPhoto, linkOuterPhoto,
-    modelConfigurationHeader, modelListExample, outherExamplePhoto
+    expectedDataOfModelConfiguration, linkInterPhoto, linkOuterPhoto,
+    modelConfigurationHeader, modelListExample
 } from "./body-jsons";
-import CarModel from "../model/carModel";
 
 const middleware = [thunk];
 const mockStore = configureStore(middleware);
@@ -80,16 +79,6 @@ describe('Header actions', () => {
             headers: { 'content-type': 'aplication/json' }
         });
 
-        const expectedCarModel = carModel;
-        // expectedCarModel.interPhoto = interExamplePhoto;
-        // expectedCarModel.outerPhoto = outherExamplePhoto;
-        const expectedData = [
-            {
-                type: 'FETCH_MODEL_CONFIGURATION_SUCCESS',
-                modelConfiguration: expectedCarModel
-            }
-        ]
-
         const store = mockStore({ modelConfiguration: {}});
 
         return store.dispatch(headerActions.fetchModelConfiguration('205066_000'))
@@ -149,29 +138,6 @@ describe('Header actions', () => {
             });
 
     });
-
-    // it('has add images of internal and external car in fetchModelConfigurationImages', () => {
-    //     const url = modelConfigurationHeader._links.image;
-    //
-    //     fetchMock.getOnce(url, {
-    //         body: carModelImages,
-    //         headers: { 'content-type': 'aplication/json' }
-    //     });
-    //     const expectedCarModel = new CarModel();
-    //     expectedCarModel.interPhoto = linkInterPhoto;
-    //     expectedCarModel.outerPhoto = linkOuterPhoto;
-    //     const expectedData = [
-    //         {
-    //             type: 'FETCH_MODEL_CONFIGURATION_SUCCESS',
-    //             modelConfiguration: expectedCarModel
-    //         }
-    //     ]
-    //     const store = mockStore({modelConfiguration: {}});
-    //     return store.dispatch(headerActions.fetchModelConfigurationImages(new CarModel(), url))
-    //         .then(() => {
-    //             expect(store.getActions()).toEqual(expectedData);
-    //         });
-    // });
 
     it('has error when fetchBodyList has not query', () => {
         fetchMock.getOnce(getBodiesQuery, {
