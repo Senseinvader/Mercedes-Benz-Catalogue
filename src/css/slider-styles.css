@@ -5,6 +5,7 @@
     align-content: center;
     padding: 7px 15px 0 0;
     width: 50em;
+    cursor: pointer;
 }
 
 .slider-container img {
