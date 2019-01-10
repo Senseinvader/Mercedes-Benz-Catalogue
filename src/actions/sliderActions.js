@@ -1,4 +1,4 @@
-import {fetchModelConfigurationSuccess} from "./header-actions";
+import {fetchModelConfigurationSuccess, fetchModelConfigurationFailure} from "./header-actions";
 
 export const changeImage = () => ({
     type: 'IMAGE_CHANGED'
@@ -14,5 +14,6 @@ export const fetchModelConfigurationImages = (carModel, url) => {
                 carModel.outerPhoto = body.vehicle.EXT020.url;
                 dispatch(fetchModelConfigurationSuccess(carModel));
             })
+            .catch(error => dispatch(fetchModelConfigurationFailure('Error: Mistake in query', error)));
     }
 };

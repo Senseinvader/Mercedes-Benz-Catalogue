@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {changeImage, fetchModelConfigurationImages} from '../actions/sliderActions';
 import {connect} from "react-redux";
-import {carModel} from "../actions/body-jsons";
+import CarModel from '../model/carModel';
 
 export class Slider extends Component {
 
@@ -13,25 +13,16 @@ export class Slider extends Component {
     }
 
     render() {
-        const {interPhoto, outerPhoto, exterior, handleChangeImage} = this.props;
-        if (interPhoto === undefined) {
+        const {interPhoto, outerPhoto, exterior, handleChangeImage, picturesUrl, model, handleLoadImages} = this.props;
+        if (!interPhoto && !outerPhoto) {
             return (
                 <div className="slider-container">
-                    <div className="slider fade">
-                        <img src='' alt="1"/>
-                        <p>Image is not provided</p>
-                        <div className="comment">Test</div>
-                    </div>
                 </div>
             );
         }
-
         return(
             <div className="slider-container">
-                <div className="slider fade">
-                    <img src={exterior ? interPhoto : outerPhoto} alt="Mercedes" onClick={handleChangeImage} />
-                    <div className="comment">Test</div>
-                </div>
+                <img src={exterior ? outerPhoto : interPhoto} alt="Mercedes" onClick={handleChangeImage} />
             </div>
         );
     };
