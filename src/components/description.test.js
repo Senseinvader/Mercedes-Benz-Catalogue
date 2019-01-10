@@ -18,13 +18,13 @@ describe('Description component', () => {
         const displaySetting = {exterior: true};
         const description = {interiorDesc: 'interior', exteriorDesc: 'exterior'};
         const wrapper = shallow(<Description {...displaySetting} {...description} />)
-        expect(wrapper.find('div h3').text()).toBe('This is exterior photo');
+        expect(wrapper.find('div').text()).toBe('');
     });
     it('renders inter description when exterior flag is false', () => {
         const displaySetting = {exterior: false};
         const description = {interiorDesc: 'interior', exteriorDesc: 'exterior'};
         const wrapper = shallow(<Description {...displaySetting} {...description} />)
-        expect(wrapper.find('div h3').text()).toBe('This is interior photo');
+        expect(wrapper.find('div').text()).toBe('');
     });
     //test snapshot
     it('matches the snapshot', () => {

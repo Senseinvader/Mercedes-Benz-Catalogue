@@ -1,16 +1,24 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {fetchBodyList, fetchModelList, fetchModelConfiguration} from '../actions/header-actions';
+import M from 'materialize-css/dist/js/materialize.min.js'
 
 export class Header extends Component {
 
      componentDidMount() {
         const { onLoad } = this.props;
         window.addEventListener('load', onLoad);
+        M.AutoInit();
+     }
+     componentDidUpdate(prevProps) {
+         if(this.props != prevProps) {
+            M.AutoInit();
+         }
      }
 
     render() {
-        const {bodyList, modelList, handleChangeBodyId, handleChangeModelId} = this.props;
+        
+        const {bodyList, modelList, handleChangeBodyId, handleChangeModelId, bodyLoaded, modelLoaded} = this.props;
         const optionElement = (id, name, key) => {
             return (
                 <option value={id} key={key}>
@@ -33,19 +41,23 @@ export class Header extends Component {
         };
 
         return (
-            <div className="header-container">
+            <div className="header-container row">
                 <div className="logo-container">
 
                 </div>
-                <select className="body-select" onChange={(e) => handleChangeBodyId(e.currentTarget.value)}>
-                    <option selected disabled hidden>Choose body type</option>
-                    {optionList(bodyList, 'bodyId', 'bodyName')}
-                </select>
+                <div className="input-field col s6">
+                    <select className="body-select" onChange={(e) => handleChangeBodyId(e.currentTarget.value)} disabled={bodyLoaded}>
+                        <option value='' selected disabled>Choose body type</option>
+                        {optionList(bodyList, 'bodyId', 'bodyName')}
+                    </select>
+                </div>
 
-                <select className="model-select" onChange={(e) => handleChangeModelId(e.currentTarget.value)}>
-                    <option selected disabled hidden>Choose model</option>
-                    {optionList(modelList, 'modelId', 'modelName')}
-                </select>
+                <div className="input-field col s6">
+                    <select className="model-select" onChange={(e) => handleChangeModelId(e.currentTarget.value)} disabled={modelLoaded}>
+                        <option selected disabled>Choose model</option>
+                        {optionList(modelList, 'modelId', 'modelName')}
+                    </select>
+                </div>
             </div>
         )
     }
@@ -54,14 +66,15 @@ export class Header extends Component {
 export const mapStateToProps = (state) => {
     return {
         bodyList: state.headerReducer.bodyList,
-        modelList: state.headerReducer.modelList
+        modelList: state.headerReducer.modelList,
+        bodyLoaded: state.headerReducer.bodyLoaded,
+        modelLoaded: state.headerReducer.modelLoaded
     }
 };
 
 export const mapDispatchToProps = (dispatch) => {
     return {
         onLoad: () => {
-            console.log('in mapDispathcToProps');
             dispatch(fetchBodyList());
         },
         handleChangeBodyId: (bodyId) => {

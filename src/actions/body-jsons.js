@@ -20,7 +20,8 @@ export const carModel = new CarModel("205066_000",
 export const expectedDataOfModelConfiguration = [
     {"type": "FETCH_MODEL_CONFIGURATION_REQUEST"}, {
         "type": 'FETCH_MODEL_CONFIGURATION_SUCCESS',
-        "modelConfiguration": carModel
+        "modelConfiguration": carModel,
+        picturesUrl: "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/vehicle?apikey=f54e14e9-b7f8-4775-adfb-f39bf9ebcee8"
     }];
 
 export const bodyListExample = [
@@ -58,9 +59,6 @@ export const modelListExample = [
             "models": `https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models?bodyId=15&apikey=${API_KEY}`
         }
     }];
-
-export const linkInterPhoto = "https://europe.starconnect-ce.i.daimler.com/iris/iris?COSY-EU-100-1713d0VXqXWFqtyO35PobzIExXrItvsTQKkojUfGoo7GE11KFm9mWa9Q6FjcBXBryXGEAJ3J0l5CNOB29MjbApjTlI5uxmZQC31SrkzNwlbm7jAeohKV5sN%25vqCr9yLRzQfYax7rErH1eJin8wsofoiZUMdM4FnClTg95Qp6PDakmSeWH0Stsd9sGcUfDL1XGEW9YJ0ldCfOB2zB5bAp7ToI5uKMTQmIJwF1GY6PDGmhSc63ZstXS0h3cUf8XNXGEHiTJ0lU0xOB2GS1bApFnyI5u9mIQC3zC1kzN9tKm7sDgubYwR9hDv34taSj6hVNpLLxdYfqJVf%25XEd9B96N683eUHpi3v1Lbz71&&IMGT=P27&POV=BI1,PZM";
-export const linkOuterPhoto = "https://europe.starconnect-ce.i.daimler.com/iris/iris?COSY-EU-100-1713d0VXqXWFqtyO35PobzIExXrItvsTQKkojUfGoo7GE11KFm9mWa9Q6FjcBXBryXGEAJ3J0l5CNOB29MjbApjTlI5uxmZQC31SrkzNwlbm7jAeohKV5sN%25vqCr9yLRzQfYax7rErH1eJin8wsofoiZUMdM4FnClTg95Qp6PDakmSeWH0Stsd9sGcUfDL1XGEW9YJ0ldCfOB2zB5bAp7ToI5uKMTQmIJwF1GY6PDGmhSc63ZstXS0h3cUf8XNXGEHiTJ0lU0xOB2GS1bApFnyI5u9mIQC3zC1kzN9tKm7sDgubYwR9hDv34taSj6hVNpLLxdYfqJVf%25XEd9B96N683eUHpi3v1Lbz71&&IMGT=P27&POV=BE020,PZM";
 
 export const interExamplePhoto = "https://europe.starconnect-ce.i.daimler.com/iris/iris?COSY-EU-100-1713d0VXqXWFqtyO35PobzIExXrItvsTQKkojUfGoo7GE11KFm9mWa9Q6FjcBXBryXGEAJ3J0l5CNOB29MjbApjTlI5uxmZQC31SrkzNwlbm7jAeohKV5sN%25vqCr9yLRzQfYax7rErH1eJin8wsofoiZUMdM4FnClTg95Qp6PDakmSeWH0Stsd9sGcUfDL1XGEW9YJ0ldCfOB2zB5bAp7ToI5uKMTQmIJwF1GY6PDGmhSc63ZstXS0h3cUf8XNXGEHiTJ0lU0xOB2GS1bApFnyI5u9mIQC3zC1kzN9tKm7sDgubYwR9hDv34taSj6hVNpLLxdYfqJVf%25XEd9B96N683eUHpi3v1Lbz71&&IMGT=P27&POV=BI1,PZM";
 

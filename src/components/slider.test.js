@@ -4,6 +4,7 @@ import {shallow, configure} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
 import {changeImage} from "../actions/sliderActions";
+import CarModel from "../model/carModel";
 
 configure({adapter: new Adapter()});
 
@@ -12,8 +13,12 @@ describe('Slider component', () => {
     //test mapStateToProps
     it('should show sexterior of the initial value', () => {
         const initialState = {
-            exterior: true,
-            imagesArray: []
+            sliderReducer: {
+                exterior: true
+            },
+            headerReducer: {
+                modelConfiguration: new CarModel()
+            },
         };
         expect(mapStateToProps(initialState).exterior).toBe(true);
     });
@@ -26,12 +31,17 @@ describe('Slider component', () => {
     });
     //test that component has one img node
     it('tests component has one img node', () => {
-        const wrapper = shallow(<Slider />);
+        const props = {
+            interPhoto: 'interior.jpg',
+            outerPhoto: 'exterior.jpg',
+        };
+        const wrapper = shallow(<Slider {...props}/>);
         expect(wrapper.find('img').exists()).toBe(true);
     });
 
     const props = {
-        arr: ['exterior.jpg', 'interior.jpg'],
+        interPhoto: 'interior.jpg',
+        outerPhoto: 'exterior.jpg',
         exterior: false,
         handleChangeImage: jest.fn(()=> console.log('mocked changeImage'))
     };

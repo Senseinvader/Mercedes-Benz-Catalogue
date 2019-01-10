@@ -1,0 +1,42 @@
+.slider-container {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-content: center;
+    padding: 7px 15px 0 0;
+    width: 50em;
+    cursor: pointer;
+}
+
+.slider-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.flex-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+.char {
+    font-size: 1.2em;
+}
+
+.description-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 0;
+
+}
+
+.component-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-description {
+    text-align: center;
+}
+
+.component {
+    padding-top: 15px;
+}
