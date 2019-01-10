@@ -20,7 +20,8 @@ describe('tests of search reducer', () => {
                 type: 'FETCH_BODIES_REQUEST'
             })
         ).toEqual({
-            loading: true
+            loading: true,
+            modelConfiguration: new CarModel()
         });
     });
 
