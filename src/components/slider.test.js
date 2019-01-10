@@ -36,26 +36,27 @@ describe('Slider component', () => {
     });
 
     const props = {
-        arr: ['exterior.jpg', 'interior.jpg'],
+        interPhoto: 'interior.jpg',
+        outerPhoto: 'exterior.jpg',
         exterior: false,
         handleChangeImage: jest.fn(()=> console.log('mocked changeImage'))
     };
     it('src tag node renders src correctly', () => {
         const wrapper = shallow(<Slider {...props} />);
-        expect(wrapper.find('img').props().src).toBe('interior.jpg');
+        expect(wrapper.find('img').props().src).toBe('exterior.jpg');
     });
     //comment switches depending on props exterior=false
     it('switches pictures depending on exterior prop', () => {
         const wrapper = shallow(<Slider {...props}/>);
-        expect(wrapper.find('img').props().src).toBe('interior.jpg');
-        wrapper.setProps({exterior: true});
         expect(wrapper.find('img').props().src).toBe('exterior.jpg');
+        wrapper.setProps({exterior: true});
+        expect(wrapper.find('img').props().src).toBe('interior.jpg');
     });
 
     //test switch in between images forward
     it('click on the picture calls the handleChangeImage', () => {
         const wrapper = shallow(<Slider {...props}/>);
-        expect(wrapper.find('img').props().src).toBe('interior.jpg');
+        expect(wrapper.find('img').props().src).toBe('exterior.jpg');
         wrapper.find('img').simulate('click');
         expect(props.handleChangeImage.mock.calls.length).toEqual(1);
     });
