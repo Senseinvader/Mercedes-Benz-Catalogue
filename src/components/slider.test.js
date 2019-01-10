@@ -31,7 +31,11 @@ describe('Slider component', () => {
     });
     //test that component has one img node
     it('tests component has one img node', () => {
-        const wrapper = shallow(<Slider />);
+        const props = {
+            interPhoto: 'interior.jpg',
+            outerPhoto: 'exterior.jpg',
+        };
+        const wrapper = shallow(<Slider {...props}/>);
         expect(wrapper.find('img').exists()).toBe(true);
     });
 
