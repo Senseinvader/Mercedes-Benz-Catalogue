@@ -20,7 +20,8 @@ export const carModel = new CarModel("205066_000",
 export const expectedDataOfModelConfiguration = [
     {"type": "FETCH_MODEL_CONFIGURATION_REQUEST"}, {
         "type": 'FETCH_MODEL_CONFIGURATION_SUCCESS',
-        "modelConfiguration": carModel
+        "modelConfiguration": carModel,
+        picturesUrl: "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/vehicle?apikey=f54e14e9-b7f8-4775-adfb-f39bf9ebcee8"
     }];
 
 export const bodyListExample = [
