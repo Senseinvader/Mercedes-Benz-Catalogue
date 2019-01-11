@@ -16,4 +16,4 @@ export const fetchModelConfigurationImages = (carModel, url) => {
             })
             .catch(error => dispatch(fetchModelConfigurationFailure('Error: Mistake in query', error)));
     }
-}
+};

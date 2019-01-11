@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 
-
 export class SideBlock extends Component {
 
     render() {
         const {modelConfiguration, configurationLoaded} = this.props;
-        console.log('configuartion', modelConfiguration);
         if (configurationLoaded){
             return(
                 <div className="data-container">

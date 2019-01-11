@@ -74,15 +74,3 @@ export const fetchModelConfiguration = (modelId) => {
             .catch(error => dispatch(fetchModelConfigurationFailure('Error: Mistake in query', error)));
     }
 };
-
-// export const fetchModelConfigurationImages = (carModel, url) => {
-//     return dispatch => {
-//         return fetch(url)
-//             .then(res => res.json())
-//             .then(body => {
-//                 carModel.interPhoto = body.vehicle.INT1.url;
-//                 carModel.outerPhoto = body.vehicle.EXT020.url;
-//                 dispatch(fetchModelConfigurationSuccess(carModel));
-//             })
-//     }
-// }

@@ -10,7 +10,6 @@ export default class CarModel {
         this.doors = doors;
         this.seats = seats;
         this.vehicleComponents = vehicleComponents;
-        // this.interiorDesc = interiorDesc;
         this.power = power;
         this.powerUnit = powerUnit;
         this.capacity = capacity;
@@ -27,7 +26,6 @@ export default class CarModel {
 }
 
 export const getCarModel = (model) => {
-    console.log('model', model);
     return new CarModel(
         model.modelId,
         model.configurationId,
@@ -36,7 +34,6 @@ export const getCarModel = (model) => {
         model.technicalInformation.doors,
         model.technicalInformation.seats,
         model.vehicleComponents,         //array of configuration components
-        // model.vehicleComponents[1].description,         //interior description
         model.technicalInformation.engine.powerHp.value,
         model.technicalInformation.engine.powerHp.unit,
         model.technicalInformation.engine.capacity.value,

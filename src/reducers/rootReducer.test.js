@@ -12,12 +12,15 @@ describe('Root reducer', () => {
 
     it('Should contains headerReducer', () => {
         expect(store.getState().headerReducer).toEqual({
-            bodyList: [{bodyId: '', bodyName: 'Empty'}],
-            modelList: [{modelId: '', modelName: 'Empty'}],
+            bodyList: [{bodyId: '', bodyName: 'Loading...'}],
+            modelList: [{modelId: '', modelName: 'Loading...'}],
+            bodyLoaded: true,
             loading: false,
             error: null,
             modelConfiguration: new CarModel(),
-            configurationLoaded: false
+            configurationLoaded: false,
+            modelLoaded: true,
+            picturesUrl: undefined
         });
     });
 

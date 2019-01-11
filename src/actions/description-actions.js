@@ -6,7 +6,6 @@ const setDescriptionId = (description, descriptionId) => ({
 
 export const incremetDescriptionID = () => (dispatch, getState) => {
     const descriptionList = getState().headerReducer.modelConfiguration.vehicleComponents;
-    console.log(descriptionList)
     const listLength = descriptionList.length;
     let descriptionId = getState().descriptionReducer.descriptionId;
     descriptionId++;
