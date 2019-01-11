@@ -35,13 +35,14 @@ describe('Slider component', () => {
     it('tests component has one div node', () => {
         const wrapper = shallow(<UnwrappedSlider outerPhoto={true} interPhoto={true}/>);
         expect(wrapper.find('div').exists()).toBe(true);
+    });
         
     it('tests component has one img node', () => {
         const props = {
             interPhoto: 'interior.jpg',
             outerPhoto: 'exterior.jpg',
         };
-        const wrapper = shallow(<Slider {...props}/>);
+        const wrapper = shallow(<UnwrappedSlider {...props}/>);
         expect(wrapper.find('img').exists()).toBe(true);
     });
 
