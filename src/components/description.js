@@ -17,9 +17,12 @@ class Description extends Component {
         if (configurationLoaded) {
             return (
                 <div className='description-wrapper'>
-                    <a href className="waves-effect grey darken-3 btn-large" onClick={changeToPreviousDescription}>&lt;</a>
-                    <div><p>{description}</p></div>
-                    <a href className="waves-effect grey darken-3 btn-large" onClick={changeToNextDescription}>&gt;</a>
+                    <h5 className='title-description'>Car components</h5>
+                        <div className='component-container'>
+                        <a href className="waves-effect grey darken-3 btn-large" onClick={changeToPreviousDescription}>&lt;</a>
+                        <div className='component'><p>{description}</p></div>
+                        <a href className="waves-effect grey darken-3 btn-large" onClick={changeToNextDescription}>&gt;</a>
+                    </div>
                 </div>
             );
         } else {
