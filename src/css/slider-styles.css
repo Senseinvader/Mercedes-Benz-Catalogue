@@ -24,6 +24,6 @@
 .description-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 0 15px 0 0;
+    padding: 15px 15px 0 0;
 
 }

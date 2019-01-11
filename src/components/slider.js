@@ -1,19 +1,18 @@
 import React, {Component} from 'react';
 import {changeImage, fetchModelConfigurationImages} from '../actions/sliderActions';
 import {connect} from "react-redux";
-import CarModel from '../model/carModel';
 
-export class Slider extends Component {
+class Slider extends Component {
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
+    componentDidUpdate(prevProps) {
             const {picturesUrl, model, handleLoadImages} = this.props;
-            if (prevProps.picturesUrl != picturesUrl) {
+            if (prevProps.picturesUrl !== picturesUrl) {
                 handleLoadImages(model, picturesUrl);
             }
     }
 
     render() {
-        const {interPhoto, outerPhoto, exterior, handleChangeImage, picturesUrl, model, handleLoadImages} = this.props;
+        const {interPhoto, outerPhoto, exterior, handleChangeImage} = this.props;
         if (!interPhoto && !outerPhoto) {
             return (
                 <div className="slider-container">
@@ -30,9 +29,9 @@ export class Slider extends Component {
 
 export const mapStateToProps = (state) => {
     return {
+        exterior: state.sliderReducer.exterior,
         interPhoto: state.headerReducer.modelConfiguration.interPhoto,
         outerPhoto: state.headerReducer.modelConfiguration.outerPhoto,
-        exterior: state.sliderReducer.exterior,
         picturesUrl: state.headerReducer.picturesUrl,
         model: state.headerReducer.modelConfiguration
     }
@@ -44,5 +43,7 @@ export const mapDispatchToProps = (dispatch) => {
         handleLoadImages: (model, picturesUrl) => dispatch(fetchModelConfigurationImages(model, picturesUrl))
     }
 };
+
+export const UnwrappedSlider = Slider;
 
 export default connect(mapStateToProps, mapDispatchToProps)(Slider);

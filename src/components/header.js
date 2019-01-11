@@ -11,7 +11,7 @@ export class Header extends Component {
         M.AutoInit();
      }
      componentDidUpdate(prevProps) {
-         if(this.props != prevProps) {
+         if(this.props !== prevProps) {
             M.AutoInit();
          }
      }
@@ -87,6 +87,6 @@ export const mapDispatchToProps = (dispatch) => {
     }
 };
 
-
+export const UnwrappedHeader = Header;
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
