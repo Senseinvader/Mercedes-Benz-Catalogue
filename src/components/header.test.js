@@ -1,5 +1,5 @@
 import React from 'react';
-import {Header, mapDispatchToProps, mapStateToProps} from './header';
+import {Header, UnwrappedHeader, mapDispatchToProps, mapStateToProps} from './header';
 import {configure, shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import toJson from "enzyme-to-json";
@@ -11,6 +11,7 @@ describe('Header component', () => {
     const wrapper = shallow(<Header/>);
 
     it('renders itself', () => {
+        const wrapper = shallow(<UnwrappedHeader/>);
         // const component = wrapper.dive();
         expect(toJson(wrapper)).toMatchSnapshot();
     });

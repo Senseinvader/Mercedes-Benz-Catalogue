@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import {decremetDescriptionID, incremetDescriptionID} from "../actions/description-actions";
 
-export class Description extends Component {
+class Description extends Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         const {description, changeToNextDescription} = this.props;
@@ -19,9 +19,9 @@ export class Description extends Component {
                 <div className='description-wrapper'>
                     <h5 className='title-description'>Car components</h5>
                         <div className='component-container'>
-                        <a className="waves-effect grey darken-3 btn-large" onClick={changeToPreviousDescription}>&lt;</a>
-                        <div className='component'>{description}</div>
-                        <a className="waves-effect grey darken-3 btn-large" onClick={changeToNextDescription}>&gt;</a>
+                        <a href className="waves-effect grey darken-3 btn-large" onClick={changeToPreviousDescription}>&lt;</a>
+                        <div className='component'><p>{description}</p></div>
+                        <a href className="waves-effect grey darken-3 btn-large" onClick={changeToNextDescription}>&gt;</a>
                     </div>
                 </div>
             );
@@ -50,5 +50,7 @@ export const mapDispatchToProps = (dispatch) => {
 
 
 }
+
+export const UnwrappedDesc = Description;
 
 export default connect(mapStateToProps, mapDispatchToProps)(Description);

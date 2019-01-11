@@ -1,5 +1,5 @@
 import React from 'react';
-import {Slider, mapDispatchToProps, mapStateToProps} from './slider';
+import {UnwrappedSlider, mapDispatchToProps, mapStateToProps} from './slider';
 import {shallow, configure} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
@@ -11,8 +11,10 @@ configure({adapter: new Adapter()});
 describe('Slider component', () => {
 
     //test mapStateToProps
-    it('should show sexterior of the initial value', () => {
+    it('should show exterior as the initial value', () => {
         const initialState = {
+            interPhoto: '',
+            exterior: true,
             sliderReducer: {
                 exterior: true
             },
@@ -30,6 +32,10 @@ describe('Slider component', () => {
         expect(dispatch).toHaveBeenCalledWith(changeImage());
     });
     //test that component has one img node
+    it('tests component has one div node', () => {
+        const wrapper = shallow(<UnwrappedSlider outerPhoto={true} interPhoto={true}/>);
+        expect(wrapper.find('div').exists()).toBe(true);
+        
     it('tests component has one img node', () => {
         const props = {
             interPhoto: 'interior.jpg',
@@ -46,12 +52,12 @@ describe('Slider component', () => {
         handleChangeImage: jest.fn(()=> console.log('mocked changeImage'))
     };
     it('src tag node renders src correctly', () => {
-        const wrapper = shallow(<Slider {...props} />);
+        const wrapper = shallow(<UnwrappedSlider {...props} outerPhoto={true} interPhoto={'interior.jpg'}/>);
         expect(wrapper.find('img').props().src).toBe('interior.jpg');
     });
     //comment switches depending on props exterior=false
     it('switches pictures depending on exterior prop', () => {
-        const wrapper = shallow(<Slider {...props}/>);
+        const wrapper = shallow(<UnwrappedSlider {...props} outerPhoto={'exterior.jpg'} interPhoto={'interior.jpg'}/>);
         expect(wrapper.find('img').props().src).toBe('interior.jpg');
         wrapper.setProps({exterior: true});
         expect(wrapper.find('img').props().src).toBe('exterior.jpg');
@@ -59,7 +65,7 @@ describe('Slider component', () => {
 
     //test switch in between images forward
     it('click on the picture calls the handleChangeImage', () => {
-        const wrapper = shallow(<Slider {...props}/>);
+        const wrapper = shallow(<UnwrappedSlider {...props} outerPhoto={'exterior.jpg'} interPhoto={'interior.jpg'}/>);
         expect(wrapper.find('img').props().src).toBe('interior.jpg');
         wrapper.find('img').simulate('click');
         expect(props.handleChangeImage.mock.calls.length).toEqual(1);
@@ -67,7 +73,7 @@ describe('Slider component', () => {
 
     //test match the snapshot
     it('matches the snapshot', () => {
-        const wrapper = shallow(<Slider />);
+        const wrapper = shallow(<UnwrappedSlider outerPhoto={true} interPhoto={true}/>);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
