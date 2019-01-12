@@ -4,11 +4,9 @@ import {connect} from "react-redux";
 
 class Slider extends Component {
 
-    componentDidUpdate(prevProps) {
-            const {picturesUrl, model, handleLoadImages} = this.props;
-            if (prevProps.picturesUrl !== picturesUrl) {
-                handleLoadImages(model, picturesUrl);
-            }
+    componentDidMount() {
+        const {picturesUrl, model, handleLoadImages} = this.props;
+        handleLoadImages(model, picturesUrl);
     }
 
     render() {
