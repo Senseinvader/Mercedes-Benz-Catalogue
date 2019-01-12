@@ -4,7 +4,7 @@ import {decremetDescriptionID, incremetDescriptionID} from "../actions/descripti
 
 class Description extends Component {
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
+    componentDidMount() {
         const {description, changeToNextDescription} = this.props;
         if (description === '') {
             changeToNextDescription();

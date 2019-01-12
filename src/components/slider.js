@@ -13,7 +13,7 @@ class Slider extends Component {
         const {interPhoto, outerPhoto, exterior, handleChangeImage} = this.props;
         return  (
             <div className="slider-container">
-                {outerPhoto ? <img src={exterior ? outerPhoto : interPhoto} alt="Mercedes" onClick={handleChangeImage} /> : null}
+                {(interPhoto && outerPhoto) ? <img src={exterior ? outerPhoto : interPhoto} alt="Mercedes" onClick={handleChangeImage} /> : null}
             </div>
         );
     };
