@@ -21,7 +21,8 @@ export class Header extends Component {
 
     render() {
         
-        const {bodyList, modelList, handleChangeBodyId, handleChangeModelId, bodyNotLoaded, modelNotLoaded, configurationLoaded} = this.props;
+        const {bodyList, modelList, handleChangeBodyId, handleChangeModelId, 
+            bodyNotLoaded, modelNotLoaded, configurationLoaded} = this.props;
         const optionElement = (id, name, key) => {
             return (
                 <option value={id} key={key}>

@@ -11,15 +11,9 @@ class Slider extends Component {
 
     render() {
         const {interPhoto, outerPhoto, exterior, handleChangeImage} = this.props;
-        if (!interPhoto && !outerPhoto) {
-            return (
-                <div className="slider-container">
-                </div>
-            );
-        }
-        return(
+        return  (
             <div className="slider-container">
-                <img src={exterior ? outerPhoto : interPhoto} alt="Mercedes" onClick={handleChangeImage} />
+                {outerPhoto ? <img src={exterior ? outerPhoto : interPhoto} alt="Mercedes" onClick={handleChangeImage} /> : null}
             </div>
         );
     };
