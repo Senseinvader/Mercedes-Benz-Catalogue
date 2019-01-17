@@ -18,10 +18,10 @@ class Description extends Component {
             return (
                 <div className='description-wrapper'>
                     <h5 className='title-description'>Car components</h5>
-                        <div className='component-container'>
-                        <a className="waves-effect grey darken-3 btn-large" onClick={changeToPreviousDescription}>&lt;</a>
-                        <div className='component'><p>{description}</p></div>
-                        <a className="waves-effect grey darken-3 btn-large" onClick={changeToNextDescription}>&gt;</a>
+                    <div className='component-container row'>
+                        <a href className="waves-effect grey darken-3 btn-large col s1" onClick={changeToPreviousDescription}>&lt;</a>
+                        <div className='description col s10'><p>{description}</p></div>
+                        <a href className="waves-effect grey darken-3 btn-large col s1" onClick={changeToNextDescription}>&gt;</a>
                     </div>
                 </div>
             );

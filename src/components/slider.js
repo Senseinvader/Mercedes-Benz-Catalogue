@@ -9,11 +9,16 @@ class Slider extends Component {
         handleLoadImages(model, picturesUrl);
     }
 
+    photosLoaded() {
+        const {interPhoto, outerPhoto} = this.props;
+        return interPhoto && outerPhoto;
+    }
+
     render() {
         const {interPhoto, outerPhoto, exterior, handleChangeImage} = this.props;
         return  (
             <div className="slider-container">
-                {(interPhoto && outerPhoto) ? <img src={exterior ? outerPhoto : interPhoto} alt="Mercedes" onClick={handleChangeImage} /> : null}
+                { this.photosLoaded ? <img src={exterior ? outerPhoto : interPhoto} alt="Mercedes" onClick={handleChangeImage} /> : null}
             </div>
         );
     };

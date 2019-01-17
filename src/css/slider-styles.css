@@ -1,10 +1,5 @@
 .slider-container {
-    display: flex;
-    display: -webkit-flex;
-    justify-content: center;
-    align-content: center;
-    padding: 7px 15px 0 0;
-    width: 50em;
+    padding: 7px 0 0 0;
     cursor: pointer;
 }
 
@@ -14,22 +9,22 @@
 }
 
 .flex-wrapper {
-    display: flex;
-    justify-content: space-around;
+    padding: 1em;
 }
-.char {
+
+.char, .title-description {
     font-size: 1.2em;
 }
 
 .description-wrapper {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 15px 0 0;
-    flex-direction: column;
-    padding: 0 15px 0 0;
+    padding: 0 15px 0 15px;
 }
 
-.component-container {
+.description, .title-description {
+    text-align: center;
+}
+
+/*.component-container {
     display: flex;
     justify-content: space-between;
 }
@@ -40,4 +35,4 @@
 
 .component {
     padding-top: 15px;
-}
+} */

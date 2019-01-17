@@ -50,14 +50,14 @@ export class Header extends Component {
                     <div className="logo-container">
 
                     </div>
-                    <div className="input-field col s6">
+                    <div className="input-field col l6 s12">
                         <select className="body-select" onChange={(e) => handleChangeBodyId(e.currentTarget.value)} disabled={bodyNotLoaded}>
                             <option value='' selected disabled>Choose body type</option>
                             {optionList(bodyList, 'bodyId', 'bodyName')}
                         </select>
                     </div>
 
-                    <div className="input-field col s6">
+                    <div className="input-field col l6 s12">
                         <select className="model-select" onChange={(e) => handleChangeModelId(e.currentTarget.value)} disabled={modelNotLoaded}>
                             <option selected disabled>Choose model</option>
                             {optionList(modelList, 'modelId', 'modelName')}
@@ -66,11 +66,13 @@ export class Header extends Component {
                 </div>
                 {configurationLoaded && (
                     <Suspense fallback={<div>Loading...</div>}>
-                        <div className='flex-wrapper'>
-                            <SideBlock/>
-                            <div className='left-side-wrapper'>
+                        <div className='flex-wrapper row'>
+                            <div className='left-side-wrapper col s12 l8'>
                                 <Slider/>
                                 <Description/>
+                            </div>
+                            <div clasName='right-side-wrapper'>
+                                <SideBlock/>
                             </div>
                         </div>
                     </Suspense>
