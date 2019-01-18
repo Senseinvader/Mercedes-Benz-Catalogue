@@ -16,9 +16,12 @@ class Slider extends Component {
 
     render() {
         const {interPhoto, outerPhoto, exterior, handleChangeImage} = this.props;
+
         return  (
             <div className="slider-container">
-                { this.photosLoaded ? <img src={exterior ? outerPhoto : interPhoto} alt="Mercedes" onClick={handleChangeImage} /> : null}
+                <a href className="button-image-back waves-effect grey darken-3 btn-large" onClick={handleChangeImage}><i class="fas fa-caret-left"></i></a>
+                <a href className="button-image-forward waves-effect grey darken-3 btn-large" onClick={handleChangeImage}><i class="fas fa-caret-right"></i></a>
+                <img className='image responsive-img' src={exterior ? outerPhoto : interPhoto} alt="Mercedes" />
             </div>
         );
     };

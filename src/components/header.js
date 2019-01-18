@@ -65,12 +65,15 @@ export class Header extends Component {
                     </div>
                 </div>
                 {configurationLoaded && (
-                    <Suspense fallback={<div>Loading...</div>}>
+                    <Suspense fallback={<div class="progress">
+                                            <div class="indeterminate"></div>
+                                        </div>}>
                         <div className='flex-wrapper row'>
                             <div className='left-side-wrapper col s12 l8'>
                                 <Slider/>
                                 <Description/>
                             </div>
+                            {/* materialize styles for side-block are inside od the component applied to the wrapping div (they don't work from here) */}
                             <div clasName='right-side-wrapper'>
                                 <SideBlock/>
                             </div>

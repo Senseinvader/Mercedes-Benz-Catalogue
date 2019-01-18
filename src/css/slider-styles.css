@@ -1,11 +1,5 @@
 .slider-container {
     padding: 7px 0 0 0;
-    cursor: pointer;
-}
-
-.slider-container img {
-    width: 100%;
-    height: 100%;
 }
 
 .flex-wrapper {
@@ -22,6 +16,21 @@
 
 .description, .title-description {
     text-align: center;
+}
+
+.slider-container {
+    position: relative;
+}
+
+.button-image-back, .button-image-forward {
+    position: absolute;
+    top: 50%;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.button-image-forward {
+    right: 0;
 }
 
 /*.component-container {
