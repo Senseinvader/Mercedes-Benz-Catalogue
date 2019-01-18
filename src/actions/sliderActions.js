@@ -4,6 +4,14 @@ export const changeImage = () => ({
     type: 'IMAGE_CHANGED'
 });
 
+export const increaseImage = () => ({
+    type: 'IMAGE_INCREASED'
+});
+
+export const decreaseImage = () => ({
+    type: 'IMAGE_DECREASED'
+});
+
 
 export const fetchModelConfigurationImages = (carModel, url) => {
     return dispatch => {

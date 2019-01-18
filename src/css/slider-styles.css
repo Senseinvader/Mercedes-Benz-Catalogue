@@ -33,6 +33,29 @@
     right: 0;
 }
 
+.increase-button {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    font-size: 5em;
+    opacity: 0;
+    color: rgb(175, 175, 175);
+    transition: opacity .25s ease-in-out;
+}
+
+.increase-button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+.modal-container {
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: absolute;
+    background-color: rgb(151, 151, 151); 
+    cursor: pointer;
+}
+
 /*.component-container {
     display: flex;
     justify-content: space-between;
