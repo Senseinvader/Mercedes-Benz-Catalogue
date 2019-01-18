@@ -7,7 +7,7 @@ export class SideBlock extends Component {
         const {modelConfiguration, configurationLoaded} = this.props;
         if (configurationLoaded){
             return(
-                <div className='data-container card-panel grey darken-3 col s12 l4'>
+                <div className='data-container card-panel grey darken-3'>
                     <div className='char price white-text'><p>Price: <b>{modelConfiguration.price} {modelConfiguration.currency}</b></p></div>
                     <div className='char doors white-text'><p>Number of doors: <b>{modelConfiguration.doors}</b></p></div>
                     <div className='char seats white-text'><p>Number of seats: <b>{modelConfiguration.seats}</b></p></div>
