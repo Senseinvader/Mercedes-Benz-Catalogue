@@ -6,9 +6,9 @@ describe('tests of search reducer', () => {
     it('should return the initial state', () => {
         expect(headerReducer(undefined, {})).toEqual({
                 bodyList: [{bodyId: '', bodyName: 'Loading...'}],
-                bodyLoaded: true,
+                bodyNotLoaded: true,
                 modelList: [{modelId: '', modelName: 'Loading...'}],
-                modelLoaded: true,
+                modelNotLoaded: true,
                 picturesURL: undefined,
                 loading: false,
                 error: null,
@@ -23,7 +23,7 @@ describe('tests of search reducer', () => {
                 type: 'FETCH_BODIES_REQUEST'
             })
         ).toEqual({
-            bodyLoaded: true,
+            bodyNotLoaded: true,
             loading: true,
             modelConfiguration: new CarModel()
         });
@@ -42,7 +42,7 @@ describe('tests of search reducer', () => {
         ).toEqual({
                 bodyList: bodyList,
                 loading:false,
-            bodyLoaded: false
+            bodyNotLoaded: false
         });
     });
 
@@ -67,7 +67,7 @@ describe('tests of search reducer', () => {
         })
        ).toEqual({
             loading: true,
-            modelLoaded: true
+            modelNotLoaded: true
         })
     });
 
@@ -82,7 +82,7 @@ describe('tests of search reducer', () => {
         ).toEqual({
             modelList,
             loading: false,
-            modelLoaded: false
+            modelNotLoaded: false
         })
     });
 

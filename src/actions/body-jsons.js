@@ -188,7 +188,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/paint?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/paint?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "040",
                         "codeType": "L",
@@ -209,7 +209,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/upholstery?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/upholstery?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "001",
                         "codeType": "P",
@@ -230,7 +230,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/059?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/059?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "059",
                         "codeType": "S",
@@ -251,7 +251,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/08U?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/08U?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "08U",
                         "codeType": "S",
@@ -273,7 +273,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/09U?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/09U?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "09U",
                         "codeType": "S",
@@ -295,7 +295,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/15U?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/15U?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "15U",
                         "codeType": "S",
@@ -316,7 +316,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/258?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/258?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "258",
                         "codeType": "S",
@@ -338,7 +338,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/345?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/345?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "345",
                         "codeType": "S",
@@ -360,7 +360,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/351?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/351?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "351",
                         "codeType": "S",
@@ -382,7 +382,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/362?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/362?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "362",
                         "codeType": "S",
@@ -404,7 +404,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/421?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/421?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "421",
                         "codeType": "S",
@@ -480,7 +480,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/428?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/428?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "428",
                         "codeType": "S",
@@ -501,7 +501,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/440?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/440?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "440",
                         "codeType": "S",
@@ -523,7 +523,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/475?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/475?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "475",
                         "codeType": "S",
@@ -545,7 +545,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/485?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/485?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "485",
                         "codeType": "S",
@@ -567,7 +567,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/506?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/506?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "506",
                         "codeType": "S",
@@ -589,7 +589,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/580?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/580?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "580",
                         "codeType": "S",
@@ -611,7 +611,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/58U?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/58U?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "58U",
                         "codeType": "S",
@@ -633,7 +633,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/620?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/620?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "620",
                         "codeType": "S",
@@ -655,7 +655,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/70B?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/70B?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "70B",
                         "codeType": "S",
@@ -677,7 +677,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/809?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/809?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "809",
                         "codeType": "S",
@@ -698,7 +698,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/893?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/893?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "893",
                         "codeType": "S",
@@ -720,7 +720,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/916?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/916?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "916",
                         "codeType": "S",
@@ -742,7 +742,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/927?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/927?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "927",
                         "codeType": "S",
@@ -763,7 +763,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/969?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/969?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "969",
                         "codeType": "S",
@@ -784,7 +784,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/998?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/998?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "998",
                         "codeType": "S",
@@ -805,7 +805,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/B16?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/B16?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "B16",
                         "codeType": "S",
@@ -827,7 +827,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/B59?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/B59?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "B59",
                         "codeType": "S",
@@ -849,7 +849,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/trim?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/trim?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "H80",
                         "codeType": "S",
@@ -871,7 +871,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/L3E?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/L3E?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "L3E",
                         "codeType": "S",
@@ -926,7 +926,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/R01?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/R01?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "R01",
                         "codeType": "S",
@@ -947,7 +947,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/rim?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/rim?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "R43",
                         "codeType": "S",
@@ -969,7 +969,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/U10?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/U10?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "U10",
                         "codeType": "S",
@@ -991,7 +991,7 @@ export const expectedDataOfModelConfiguration = [
                     },
                     {
                         "_links": {
-                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/V56?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec"
+                            "image": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/components/equipments/V56?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c"
                         },
                         "code": "V56",
                         "codeType": "S",
@@ -1012,7 +1012,7 @@ export const expectedDataOfModelConfiguration = [
                     }
                 ]
             },
-            "picturesUrl": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/vehicle?apikey=6c6b3950-29b6-4678-9497-4aa10409f9ec",
+            "picturesUrl": "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/205066_000/configurations/I-P15-P75_L-040_P-001_S-059-08U-09U-15U-258-345-351-362-421-428-440-475-485-506-580-58U-620-70B-809-893-916-927-969-998-B16-B59-H80-L3E-R01-R43-U10-V56/images/vehicle?apikey=972c9cb7-c0ec-4abe-a98c-66eb219b2e2c",
             "type": "FETCH_MODEL_CONFIGURATION_SUCCESS"
         }
     ];

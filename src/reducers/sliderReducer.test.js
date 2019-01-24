@@ -5,7 +5,7 @@ describe('select reducer', () => {
     describe('Initial state', () =>{
        it('is correct', () => {
            const action = {type: 'dummy_action'};
-           const initialState = {exterior: true, imagesArray: []};
+           const initialState = {exterior: true, imagesArray: [], modal: false};
            expect(sliderReducer(undefined, action)).toEqual(initialState);
        });
     });
