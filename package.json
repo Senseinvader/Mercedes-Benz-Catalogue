@@ -1,7 +1,12 @@
 {
   "name": "car-api-tdd",
+  "main": "index.js",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "5.7.1",
+    "node": "9.5.0"
+  },
   "dependencies": {
     "@types/materialize-css": "^1.0.6",
     "fetch-mock": "latest",
